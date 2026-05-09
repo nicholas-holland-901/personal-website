@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    border-top: 10px;
+    position: relative;
+    height: 35px;
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    background: linear-gradient(to bottom,
+        rgb(255, 255, 250) 0%,
+        rgb(94, 138, 37) 60%,
+        rgb(94, 138, 37) 60%,
+        rgb(90, 149, 92) 100%
+    );
+};
+
