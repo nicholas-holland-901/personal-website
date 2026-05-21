@@ -9,8 +9,10 @@ function App() {
       <main>
         <section id="home" className="section home">
           <div className="hero-content">
-            <h1>Welcome to my site</h1>
-            <p>Creator. Developer. Designer.</p>
+            <div className="hero-copy">
+              <h1>Welcome to my site</h1>
+              <p>Creator. Developer. Designer.</p>
+            </div>
             <img className="hero-image" src="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="hero" />
           </div>
         </section>
