@@ -60,22 +60,22 @@ function App() {
           <div className="section-inner">
             <div className="cards">
               <article className="card">
-                <img src="https://picsum.photos/seed/p1/600/300" alt="project 1" />
-                <h3>Project One</h3>
-                <p>Short description of project one. Tools: React, Node.</p>
-                <a className="btn" href="#">View</a>
+                <img src="/self_playing_flute_project_image.png" alt="self_playing_flute_project" />
+                <h3>Self-Playing Flute</h3>
+                <p>FILL IN LATER Uses: C++, microcontroller</p>
+                <a className="btn" href="https://github.com/nicholas-holland-901/self_playing_flute" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
               <article className="card">
-                <img src="https://picsum.photos/seed/p2/600/300" alt="project 2" />
-                <h3>Project Two</h3>
-                <p>Short description of project two. Tools: Python, Flask.</p>
-                <a className="btn" href="#">View</a>
+                <img src="/snake_game_image_neural_network.png" alt="snake_game_brain_project" />
+                <h3>Neural Network from Scratch</h3>
+                <p>FILL IN LATER Uses: C, SDL3</p>
+                <a className="btn" href="https://github.com/nicholas-holland-901/snake_game_brain" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
               <article className="card">
-                <img src="https://picsum.photos/seed/p3/600/300" alt="project 3" />
-                <h3>Project Three</h3>
-                <p>Short description of project three. Tools: Unity, C#.</p>
-                <a className="btn" href="#">View</a>
+                <img src="/rackgit_image.png" alt="rackgit_project" />
+                <h3>Rackgit</h3>
+                <p>FILL IN LATER Uses: Racket</p>
+                <a className="btn" href="https://github.com/nicholas-holland-901/rackgit" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
             </div>
           </div>
@@ -121,16 +121,16 @@ function App() {
           <div className="section-inner">
             <div className="cards">
               <article className="card">
-                <img src="https://picsum.photos/seed/g1/600/300" alt="game 1" />
-                <h3>Game Alpha</h3>
-                <p>A small puzzle game built with Unity.</p>
-                <a className="btn" href="#">Play</a>
+                <img src="/woodtrail_thumbnail.png" alt="woodtrail_game_thumbnail" />
+                <h3>Woodtrail</h3>
+                <p>A short low-poly horror game made in one week</p>
+                <a className="btn" href="https://xxtinyturtxx.itch.io/woodtrail" target="_blank" rel="noopener noreferrer">View on itch.io</a>
               </article>
               <article className="card">
-                <img src="https://picsum.photos/seed/g2/600/300" alt="game 2" />
-                <h3>Game Beta</h3>
-                <p>Browser-based mini-game using canvas.</p>
-                <a className="btn" href="#">Play</a>
+                <img src="/pollykitten_thumbnail.png" alt="pollykitten_game_thumbnail" />
+                <h3>PollyKitten</h3>
+                <p>A browser rhythm game made in one week</p>
+                <a className="btn" href="https://xxtinyturtxx.itch.io/pollykitten" target="_blank" rel="noopener noreferrer">View on itch.io</a>
               </article>
             </div>
           </div>
@@ -175,13 +175,9 @@ function App() {
           </div>
           <div className="section-inner">
             <ul className="education-list">
+              <strong>Northwestern University</strong>
               <li>
-                <strong>BSc Computer Science</strong>
-                <span> — University Name (2016–2020)</span>
-              </li>
-              <li>
-                <strong>Online Courses</strong>
-                <span> — Various (React, Unity)</span>
+                <span>Bachelor of Science in Computer Engineering</span>
               </li>
             </ul>
           </div>
@@ -225,14 +221,13 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
-            <p>Download a PDF version of my resume or view the highlights below.</p>
             <a className="btn" href="/resume.pdf" download>Download Resume (PDF)</a>
             <div className="resume-highlights">
-              <h3>Highlights</h3>
+              <h3>temp</h3>
               <ul>
-                <li>5+ years software development</li>
-                <li>Worked on full-stack web apps and indie games</li>
-                <li>Open-source contributor</li>
+                <li>temp</li>
+                <li>temp</li>
+                <li>temp</li>
               </ul>
             </div>
           </div>
