@@ -1,8 +1,18 @@
+:root {
+  --nav-h: 70px;
+}
+
+html {
+  scroll-padding-top: var(--nav-h);
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow: auto;
+  scroll-behavior: smooth;
+  padding-top: var(--nav-h);
 }
 
 code {
