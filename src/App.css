@@ -1,14 +1,4 @@
 html {
-  --s: 32px;
-  /* --c2:#4527ea;
-  --c1:#649fcf; */
-
-  --c2:#2f11da;
-  --c1:#99d1ff;
-  
-  --g:radial-gradient(10% 20% at 30% 50%,#dadada00 0%,var(--c1) 0% 98%,#00000000);
-  background:
-    var(--g),var(--g) calc(5*var(--s)) calc(3*var(--s)),
-    repeating-linear-gradient(0deg,var(--c1) 0 0%,var(--c2) 0 0%);
-  background-size: calc(10*var(--s)) calc(5*var(--s));
+	background-color: #5C3D31;
 }
+
