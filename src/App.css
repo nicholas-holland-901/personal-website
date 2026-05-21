@@ -400,23 +400,16 @@ main {
 .win-btn {
 	width: 24px;
 	height: 18px;
-	border: 2px solid #808080;
 	display: inline-flex;
 	align-items: center;
+	border: 0px;
 	justify-content: center;
-	background: linear-gradient(180deg, #f0f0f0 0%, #d9d9d9 100%);
+	background: #b7b7b7;
 	color: #111;
 	font-weight: 700;
-	border-radius: 0;
+	border-radius: 0px;
 	cursor: pointer;
 	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.8), inset -1px -1px 0 rgba(0,0,0,0.12);
-}
-.win-btn:hover {
-	background: linear-gradient(180deg, #dedede 0%, #c4c4c4 100%);
-}
-.win-btn.close {
-	background: linear-gradient(180deg, #f0f0f0 0%, #d9d9d9 100%);
-	color: #111;
 }
 
 /* smooth transitions for evasive buttons */

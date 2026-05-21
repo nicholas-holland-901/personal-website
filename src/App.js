@@ -329,14 +329,14 @@ function RetroWindow() {
       >
         <span className="title">Last Photo Taken - v1.5</span>
         <div className="window-controls">
-          <button ref={minRef} className="win-btn minimize" aria-label="Minimize" style={{ transform: `translate(${minOffset.x}px, ${minOffset.y}px)` }}>—</button>
-          <button ref={maxRef} className="win-btn maximize" aria-label="Maximize" style={{ transform: `translate(${maxOffset.x}px, ${maxOffset.y}px)` }}>▢</button>
+          <button ref={minRef} className="win-btn minimize" aria-label="Minimize" style={{ transform: `translate(${minOffset.x}px, ${minOffset.y}px)` }}>-</button>
+          <button ref={maxRef} className="win-btn maximize" aria-label="Maximize" style={{ transform: `translate(${maxOffset.x}px, ${maxOffset.y}px)` }}>o</button>
           <button
             ref={closeRef}
             className="win-btn close"
             aria-label="Close"
             style={{ transform: `translate(${closeOffset.x}px, ${closeOffset.y}px)` }}
-          >✕</button>
+          >x</button>
         </div>
       </div>
       <div className="retro-content">
@@ -396,9 +396,9 @@ function StaticWindow({ children }) {
       <div className="retro-titlebar">
         <span className="title">About Me - v1.9</span>
         <div className="window-controls">
-          <button ref={minRef} className="win-btn minimize" aria-hidden style={{ transform: `translate(${minOffset.x}px, ${minOffset.y}px)` }}>—</button>
-          <button ref={maxRef} className="win-btn maximize" aria-hidden style={{ transform: `translate(${maxOffset.x}px, ${maxOffset.y}px)` }}>▢</button>
-          <button ref={closeRef} className="win-btn close" aria-hidden style={{ transform: `translate(${closeOffset.x}px, ${closeOffset.y}px)` }}>✕</button>
+          <button ref={minRef} className="win-btn minimize" aria-hidden style={{ transform: `translate(${minOffset.x}px, ${minOffset.y}px)` }}>-</button>
+          <button ref={maxRef} className="win-btn maximize" aria-hidden style={{ transform: `translate(${maxOffset.x}px, ${maxOffset.y}px)` }}>o</button>
+          <button ref={closeRef} className="win-btn close" aria-hidden style={{ transform: `translate(${closeOffset.x}px, ${closeOffset.y}px)` }}>x</button>
         </div>
       </div>
       <div className="retro-content">
