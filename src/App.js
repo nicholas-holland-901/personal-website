@@ -29,7 +29,7 @@ function App() {
             <StaticWindow>
               <div className="hero-copy-inner">
                 <h1><HeroText text="Nicholas Holland" className="hero-title" /></h1>
-                <p><HeroText text="Computer Engineer" className="hero-sub" /></p>
+                <p><HeroText text="Computer Engineer & Game Developer" className="hero-sub" /></p>
               </div>
             </StaticWindow>
             {/* Retro window (image) placed left of the hero text */}
@@ -39,7 +39,7 @@ function App() {
         </section>
 
         <section id="projects" className="section" data-banner="Projects">
-          <div className="section-banner">
+          <div className="section-banner top">
             <div className="banner-track">
               <div className="banner-list">
                 <span className="banner-item">Projects</span>
@@ -58,7 +58,6 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
-            <h2>Projects</h2>
             <div className="cards">
               <article className="card">
                 <img src="https://picsum.photos/seed/p1/600/300" alt="project 1" />
@@ -80,10 +79,28 @@ function App() {
               </article>
             </div>
           </div>
+          <div className="section-banner bottom">
+            <div className="banner-track">
+              <div className="banner-list">
+                <span className="banner-item">Projects</span>
+                <span className="banner-item">Projects</span>
+                <span className="banner-item">Projects</span>
+                <span className="banner-item">Projects</span>
+                <span className="banner-item">Projects</span>
+              </div>
+              <div className="banner-list">
+                <span className="banner-item">Projects</span>
+                <span className="banner-item">Projects</span>
+                <span className="banner-item">Projects</span>
+                <span className="banner-item">Projects</span>
+                <span className="banner-item">Projects</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="games" className="section" data-banner="Games">
-          <div className="section-banner">
+          <div className="section-banner top">
             <div className="banner-track">
               <div className="banner-list">
                 <span className="banner-item">Games</span>
@@ -102,7 +119,6 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
-            <h2>Games</h2>
             <div className="cards">
               <article className="card">
                 <img src="https://picsum.photos/seed/g1/600/300" alt="game 1" />
@@ -118,10 +134,28 @@ function App() {
               </article>
             </div>
           </div>
+          <div className="section-banner bottom">
+            <div className="banner-track">
+              <div className="banner-list">
+                <span className="banner-item">Games</span>
+                <span className="banner-item">Games</span>
+                <span className="banner-item">Games</span>
+                <span className="banner-item">Games</span>
+                <span className="banner-item">Games</span>
+              </div>
+              <div className="banner-list">
+                <span className="banner-item">Games</span>
+                <span className="banner-item">Games</span>
+                <span className="banner-item">Games</span>
+                <span className="banner-item">Games</span>
+                <span className="banner-item">Games</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="education" className="section" data-banner="Education">
-          <div className="section-banner">
+          <div className="section-banner top">
             <div className="banner-track">
               <div className="banner-list">
                 <span className="banner-item">Education</span>
@@ -140,7 +174,6 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
-            <h2>Education</h2>
             <ul className="education-list">
               <li>
                 <strong>BSc Computer Science</strong>
@@ -152,10 +185,28 @@ function App() {
               </li>
             </ul>
           </div>
+          <div className="section-banner bottom">
+            <div className="banner-track">
+              <div className="banner-list">
+                <span className="banner-item">Education</span>
+                <span className="banner-item">Education</span>
+                <span className="banner-item">Education</span>
+                <span className="banner-item">Education</span>
+                <span className="banner-item">Education</span>
+              </div>
+              <div className="banner-list">
+                <span className="banner-item">Education</span>
+                <span className="banner-item">Education</span>
+                <span className="banner-item">Education</span>
+                <span className="banner-item">Education</span>
+                <span className="banner-item">Education</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="resume" className="section" data-banner="Resume">
-          <div className="section-banner">
+          <div className="section-banner top">
             <div className="banner-track">
               <div className="banner-list">
                 <span className="banner-item">Resume</span>
@@ -174,7 +225,6 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
-            <h2>Resume</h2>
             <p>Download a PDF version of my resume or view the highlights below.</p>
             <a className="btn" href="/resume.pdf" download>Download Resume (PDF)</a>
             <div className="resume-highlights">
@@ -184,6 +234,24 @@ function App() {
                 <li>Worked on full-stack web apps and indie games</li>
                 <li>Open-source contributor</li>
               </ul>
+            </div>
+          </div>
+          <div className="section-banner bottom">
+            <div className="banner-track">
+              <div className="banner-list">
+                <span className="banner-item">Resume</span>
+                <span className="banner-item">Resume</span>
+                <span className="banner-item">Resume</span>
+                <span className="banner-item">Resume</span>
+                <span className="banner-item">Resume</span>
+              </div>
+              <div className="banner-list">
+                <span className="banner-item">Resume</span>
+                <span className="banner-item">Resume</span>
+                <span className="banner-item">Resume</span>
+                <span className="banner-item">Resume</span>
+                <span className="banner-item">Resume</span>
+              </div>
             </div>
           </div>
         </section>
@@ -284,14 +352,58 @@ function RetroWindow() {
 }
 
 function StaticWindow({ children }) {
+  const [closeOffset, setCloseOffset] = useState({ x: 0, y: 0 });
+  const [minOffset, setMinOffset] = useState({ x: 0, y: 0 });
+  const [maxOffset, setMaxOffset] = useState({ x: 0, y: 0 });
+
+  const closeRef = React.useRef(null);
+  const minRef = React.useRef(null);
+  const maxRef = React.useRef(null);
+
+  const handleEvasive = (e, ref, setOffsetFn) => {
+    const el = ref.current;
+    if (!el) return setOffsetFn({ x: 0, y: 0 });
+    const rect = el.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const dx = e.clientX - cx;
+    const dy = e.clientY - cy;
+    const dist = Math.hypot(dx, dy);
+    const threshold = 70;
+    if (dist < threshold) {
+      const push = (threshold - dist) * 0.7;
+      const nx = dx / (dist || 1);
+      const ny = dy / (dist || 1);
+      setOffsetFn({ x: -nx * push, y: -ny * push });
+    } else {
+      setOffsetFn({ x: 0, y: 0 });
+    }
+  };
+
+  const onMouseMoveWindow = (e) => {
+    handleEvasive(e, closeRef, setCloseOffset);
+    handleEvasive(e, minRef, setMinOffset);
+    handleEvasive(e, maxRef, setMaxOffset);
+  };
+
+  const onMouseLeaveWindow = () => {
+    setCloseOffset({ x: 0, y: 0 });
+    setMinOffset({ x: 0, y: 0 });
+    setMaxOffset({ x: 0, y: 0 });
+  };
+
   return (
-    <div className="retro-window static">
+    <div
+      className="retro-window static"
+      onMouseMove={onMouseMoveWindow}
+      onMouseLeave={onMouseLeaveWindow}
+    >
       <div className="retro-titlebar">
         <span className="title">About Me - v1.0</span>
         <div className="window-controls">
-          <div className="win-btn minimize" aria-hidden>—</div>
-          <div className="win-btn maximize" aria-hidden>▢</div>
-          <div className="win-btn close" aria-hidden>✕</div>
+          <button ref={minRef} className="win-btn minimize" aria-hidden style={{ transform: `translate(${minOffset.x}px, ${minOffset.y}px)` }}>—</button>
+          <button ref={maxRef} className="win-btn maximize" aria-hidden style={{ transform: `translate(${maxOffset.x}px, ${maxOffset.y}px)` }}>▢</button>
+          <button ref={closeRef} className="win-btn close" aria-hidden style={{ transform: `translate(${closeOffset.x}px, ${closeOffset.y}px)` }}>✕</button>
         </div>
       </div>
       <div className="retro-content">
