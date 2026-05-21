@@ -332,7 +332,7 @@ function RetroWindow() {
         className="retro-titlebar"
         style={{ touchAction: 'none' }}
       >
-        <span className="title">About Me - v1.0</span>
+        <span className="title">Last Photo Taken - v1.5</span>
         <div className="window-controls">
           <button ref={minRef} className="win-btn minimize" aria-label="Minimize" style={{ transform: `translate(${minOffset.x}px, ${minOffset.y}px)` }}>—</button>
           <button ref={maxRef} className="win-btn maximize" aria-label="Maximize" style={{ transform: `translate(${maxOffset.x}px, ${maxOffset.y}px)` }}>▢</button>
@@ -399,7 +399,7 @@ function StaticWindow({ children }) {
       onMouseLeave={onMouseLeaveWindow}
     >
       <div className="retro-titlebar">
-        <span className="title">About Me - v1.0</span>
+        <span className="title">About Me - v1.9</span>
         <div className="window-controls">
           <button ref={minRef} className="win-btn minimize" aria-hidden style={{ transform: `translate(${minOffset.x}px, ${minOffset.y}px)` }}>—</button>
           <button ref={maxRef} className="win-btn maximize" aria-hidden style={{ transform: `translate(${maxOffset.x}px, ${maxOffset.y}px)` }}>▢</button>
