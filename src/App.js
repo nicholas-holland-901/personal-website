@@ -79,7 +79,7 @@ function App() {
               </article>
             </div>
           </div>
-          <div className="section-banner bottom">
+          {/*<div className="section-banner bottom">
             <div className="banner-track">
               <div className="banner-list">
                 <span className="banner-item">Projects</span>
@@ -96,7 +96,7 @@ function App() {
                 <span className="banner-item">Projects</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
 
         <section id="games" className="section" data-banner="Games">
@@ -134,7 +134,7 @@ function App() {
               </article>
             </div>
           </div>
-          <div className="section-banner bottom">
+          {/* <div className="section-banner bottom">
             <div className="banner-track">
               <div className="banner-list">
                 <span className="banner-item">Games</span>
@@ -151,7 +151,7 @@ function App() {
                 <span className="banner-item">Games</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
 
         <section id="education" className="section" data-banner="Education">
@@ -181,7 +181,7 @@ function App() {
               </li>
             </ul>
           </div>
-          <div className="section-banner bottom">
+          {/* <div className="section-banner bottom">
             <div className="banner-track">
               <div className="banner-list">
                 <span className="banner-item">Education</span>
@@ -198,7 +198,7 @@ function App() {
                 <span className="banner-item">Education</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
 
         <section id="resume" className="section" data-banner="Resume">
@@ -231,7 +231,7 @@ function App() {
               </ul>
             </div>
           </div>
-          <div className="section-banner bottom">
+          {/* <div className="section-banner bottom">
             <div className="banner-track">
               <div className="banner-list">
                 <span className="banner-item">Resume</span>
@@ -248,7 +248,7 @@ function App() {
                 <span className="banner-item">Resume</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
       </main>
     </div>
