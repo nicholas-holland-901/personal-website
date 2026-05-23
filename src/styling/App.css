@@ -360,7 +360,6 @@ main {
 .retro-window {
 	width: 100%;
 	max-width: 520px;
-	background: #c0c0c0;
 	border: 2px solid #000;
 	box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.25);
 	border-radius: 0;
@@ -389,36 +388,44 @@ main {
 	align-items: center;
 	gap: 8px;
 	padding: 5px 10px;
-	background: #000080;
+	background: #2660A4;
 	color: #fff;
-	font-size: 13px;
+	font-size: 14px;
 	border-bottom: 2px solid #000;
 }
 
-.retro-titlebar .title { margin-left: 6px; opacity: 0.95; flex: 1 1 auto; }
-.window-controls { display: flex; gap: 6px; }
+.retro-titlebar .title { 
+	margin-left: 6px; 
+	opacity: 0.95; 
+	flex: 1 1 
+	auto; 
+}
+
+.window-controls { 
+	display: 
+	flex; 
+	gap: 6px; 
+}
+
 .win-btn {
-	width: 24px;
-	height: 18px;
+	width: 20px;
+	height: 20px;
 	display: inline-flex;
 	align-items: center;
 	border: 0px;
 	justify-content: center;
-	background: #b7b7b7;
+	background: #F2F3D9;
 	color: #111;
 	font-weight: 700;
 	border-radius: 0px;
 	cursor: pointer;
-	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.8), inset -1px -1px 0 rgba(0,0,0,0.12);
 }
 
-/* smooth transitions for evasive buttons */
-.win-btn { transition: transform 0.12s ease; }
 
 .retro-content {
 	padding: 10px;
-	background: #c0c0c0;
-	border-top: 2px solid #808080;
+	background: #F2F3D9;
+	border-top: px solid #a5a181;
 }
 
 .retro-content .hero-image {
@@ -427,6 +434,10 @@ main {
 	width: 100%;
 	height: auto;
 	display: block;
+}
+
+.retro-content .hero-image:hover {
+	content: url('bug_self_eyes_closed.PNG');
 }
 
 /* states */

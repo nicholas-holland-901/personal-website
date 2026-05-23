@@ -288,62 +288,18 @@ function App() {
   );
 }
 
-// RetroWindow component placed at bottom of file for simplicity
 function RetroWindow() {
   const [visible, setVisible] = useState(true);
   const [minimized, setMinimized] = useState(false);
   const [maximized, setMaximized] = useState(false);
-  const [closeOffset, setCloseOffset] = useState({ x: 0, y: 0 });
-  const [minOffset, setMinOffset] = useState({ x: 0, y: 0 });
-  const [maxOffset, setMaxOffset] = useState({ x: 0, y: 0 });
 
   const winRef = React.useRef(null);
   const closeRef = React.useRef(null);
-  const minRef = React.useRef(null);
-  const maxRef = React.useRef(null);
 
-  const handleRestore = () => {
-    setVisible(true);
-    setMinimized(false);
-    setMaximized(false);
-  };
 
-  // evasive controls: push away when cursor gets near
-  const handleEvasive = (e, ref, setOffsetFn) => {
-    const el = ref.current;
-    if (!el) return setOffsetFn({ x: 0, y: 0 });
-    const rect = el.getBoundingClientRect();
-    const cx = rect.left + rect.width/2;
-    const cy = rect.top + rect.height/2;
-    const dx = e.clientX - cx;
-    const dy = e.clientY - cy;
-    const dist = Math.hypot(dx, dy);
-    const threshold = 70;
-    if (dist < threshold) {
-      const push = (threshold - dist) * 0.7;
-      const nx = (dx / (dist || 1));
-      const ny = (dy / (dist || 1));
-      setOffsetFn({ x: -nx * push, y: -ny * push });
-    } else {
-      setOffsetFn({ x: 0, y: 0 });
-    }
-  };
-
-  const onMouseMoveWindow = (e) => {
-    handleEvasive(e, closeRef, setCloseOffset);
-    handleEvasive(e, minRef, setMinOffset);
-    handleEvasive(e, maxRef, setMaxOffset);
-  };
-
-  const onMouseLeaveWindow = () => {
-    setCloseOffset({ x: 0, y: 0 });
-    setMinOffset({ x: 0, y: 0 });
-    setMaxOffset({ x: 0, y: 0 });
-  };
-
-  if (!visible) {
-    return <div><button className="btn" onClick={handleRestore}>Open Window</button></div>;
-  }
+  // if (!visible) {
+  //   return <div><button className="btn" onClick={handleRestore}>Open Window</button></div>;
+  // }
 
   const classes = ['retro-window'];
   if (minimized) classes.push('minimized');
@@ -353,8 +309,6 @@ function RetroWindow() {
     <div
       ref={winRef}
       className={classes.join(' ')}
-      onMouseMove={onMouseMoveWindow}
-      onMouseLeave={onMouseLeaveWindow}
     >
       <div
         className="retro-titlebar"
@@ -362,14 +316,9 @@ function RetroWindow() {
       >
         <span className="title">Last Photo Taken - v1.5</span>
         <div className="window-controls">
-          <button ref={minRef} className="win-btn minimize" aria-label="Minimize" style={{ transform: `translate(${minOffset.x}px, ${minOffset.y}px)` }}>-</button>
-          <button ref={maxRef} className="win-btn maximize" aria-label="Maximize" style={{ transform: `translate(${maxOffset.x}px, ${maxOffset.y}px)` }}>o</button>
-          <button
-            ref={closeRef}
-            className="win-btn close"
-            aria-label="Close"
-            style={{ transform: `translate(${closeOffset.x}px, ${closeOffset.y}px)` }}
-          >x</button>
+          <button className="win-btn" aria-label="Minimize">-</button>
+          <button className="win-btn" aria-label="Maximize">o</button>
+          <button className="win-btn" aria-label="Close">x</button>
         </div>
       </div>
       <div className="retro-content">
@@ -380,58 +329,16 @@ function RetroWindow() {
 }
 
 function StaticWindow({ children }) {
-  const [closeOffset, setCloseOffset] = useState({ x: 0, y: 0 });
-  const [minOffset, setMinOffset] = useState({ x: 0, y: 0 });
-  const [maxOffset, setMaxOffset] = useState({ x: 0, y: 0 });
-
-  const closeRef = React.useRef(null);
-  const minRef = React.useRef(null);
-  const maxRef = React.useRef(null);
-
-  const handleEvasive = (e, ref, setOffsetFn) => {
-    const el = ref.current;
-    if (!el) return setOffsetFn({ x: 0, y: 0 });
-    const rect = el.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    const dx = e.clientX - cx;
-    const dy = e.clientY - cy;
-    const dist = Math.hypot(dx, dy);
-    const threshold = 70;
-    if (dist < threshold) {
-      const push = (threshold - dist) * 0.7;
-      const nx = dx / (dist || 1);
-      const ny = dy / (dist || 1);
-      setOffsetFn({ x: -nx * push, y: -ny * push });
-    } else {
-      setOffsetFn({ x: 0, y: 0 });
-    }
-  };
-
-  const onMouseMoveWindow = (e) => {
-    handleEvasive(e, closeRef, setCloseOffset);
-    handleEvasive(e, minRef, setMinOffset);
-    handleEvasive(e, maxRef, setMaxOffset);
-  };
-
-  const onMouseLeaveWindow = () => {
-    setCloseOffset({ x: 0, y: 0 });
-    setMinOffset({ x: 0, y: 0 });
-    setMaxOffset({ x: 0, y: 0 });
-  };
-
   return (
     <div
       className="retro-window static"
-      onMouseMove={onMouseMoveWindow}
-      onMouseLeave={onMouseLeaveWindow}
     >
       <div className="retro-titlebar">
         <span className="title">About Me - v1.9</span>
         <div className="window-controls">
-          <button ref={minRef} className="win-btn minimize" aria-hidden style={{ transform: `translate(${minOffset.x}px, ${minOffset.y}px)` }}>-</button>
-          <button ref={maxRef} className="win-btn maximize" aria-hidden style={{ transform: `translate(${maxOffset.x}px, ${maxOffset.y}px)` }}>o</button>
-          <button ref={closeRef} className="win-btn close" aria-hidden style={{ transform: `translate(${closeOffset.x}px, ${closeOffset.y}px)` }}>x</button>
+          <button className="win-btn" aria-hidden>-</button>
+          <button className="win-btn" aria-hidden>o</button>
+          <button className="win-btn" aria-hidden>x</button>
         </div>
       </div>
       <div className="retro-content">
