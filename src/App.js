@@ -1,5 +1,5 @@
-import './App.css';
-import './main.scss';
+import './styling/App.css';
+import './styling/BackgroundParticles.scss';
 import Navbar from './components/navbar/Navbar';
 import React, { useState } from 'react';
 
@@ -33,9 +33,7 @@ function App() {
                 <p><HeroText text="Computer Engineer & Game Developer" className="hero-sub" /></p>
               </div>
             </StaticWindow>
-            {/* Retro window (image) placed left of the hero text */}
             <RetroWindow />
-
           </div>
         </section>
 

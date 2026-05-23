@@ -11,14 +11,29 @@
 
 @for $i from 1 through 15 {
 	@keyframes circle-animation-#{$i} {
+		0% {
+			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+			opacity: 0;
+			height: 0px;
+			width: 0px;
+		}
+		50% {
+			opacity: 0.5;
+			$size: random(100) + 50 + px;
+			height: $size;
+			width: $size;
+		}
 		100% {
 			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+			opacity: 0;
+			height: 0px;
+			width: 0px;
 		}
 	}
 	
 	.circle:nth-child(#{$i}){
 		animation: circle-animation-#{$i} 60s infinite;
-		$size: random(100) + 5 + px;
+		$size: random(100) + 50 + px;
 		height: $size;
 		width: $size;
         border: ($size / 50) solid rgba(255, 255, 255, 0.721);
