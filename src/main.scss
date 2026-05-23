@@ -1,0 +1,28 @@
+.circle {
+	position: absolute;
+	width: 240px;
+	height: 240px;
+	background: rgba(255, 255, 255, 0.678);
+	border: 5.5px solid rgba(255, 255, 255, 0.187);
+	border-radius: 100%;
+	opacity: 0.11;
+}
+
+
+@for $i from 1 through 15 {
+	@keyframes circle-animation-#{$i} {
+		100% {
+			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		}
+	}
+	
+	.circle:nth-child(#{$i}){
+		animation: circle-animation-#{$i} 60s infinite;
+		$size: random(100) + 5 + px;
+		height: $size;
+		width: $size;
+        border: ($size / 50) solid rgba(255, 255, 255, 0.721);
+		animation-delay: -$i * .2s;
+		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+	}
+}

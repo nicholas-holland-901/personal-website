@@ -1,4 +1,5 @@
 import './App.css';
+import './main.scss';
 import Navbar from './components/navbar/Navbar';
 import React, { useState } from 'react';
 
@@ -59,20 +60,20 @@ function App() {
           </div>
           <div className="section-inner">
             <div className="projects-bg-circles" aria-hidden="true">
-              <span className="projects-bg-circle circle1" />
-              <span className="projects-bg-circle circle2" />
-              <span className="projects-bg-circle circle3" />
-              <span className="projects-bg-circle circle4" />
-              <span className="projects-bg-circle circle5" />
-              <span className="projects-bg-circle circle6" />
-              <span className="projects-bg-circle circle7" />
-              <span className="projects-bg-circle circle8" />
-              <span className="projects-bg-circle circle9" />
-              <span className="projects-bg-circle circle10" />
-              <span className="projects-bg-circle circle11" />
-              <span className="projects-bg-circle circle12" />
-              <span className="projects-bg-circle circle13" />
-              <span className="projects-bg-circle circle14" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
+              <span className="circle" />
             </div>
             <div className="cards">
               <article className="card">
