@@ -60,21 +60,21 @@ function App() {
           <div className="section-inner">
             <div className="cards">
               <article className="card">
-                <img src="/self_playing_flute_project_image.png" alt="self_playing_flute_project" />
                 <h3>Self-Playing Flute</h3>
-                <p>FILL IN LATER Uses: C++, microcontroller</p>
+                <p>Control for servo motors to input flute fingerings based on midi file</p>
+                <h4>Uses: C++, microcontroller</h4>
                 <a className="btn" href="https://github.com/nicholas-holland-901/self_playing_flute" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
               <article className="card">
-                <img src="/snake_game_image_neural_network.png" alt="snake_game_brain_project" />
                 <h3>Neural Network from Scratch</h3>
-                <p>FILL IN LATER Uses: C, SDL3</p>
+                <p>A neural network written in C from scratch to play snake game, using backpropagation for training and SDL3 for graphics and input handling</p>
+                <h4>Uses: C, SDL3</h4>
                 <a className="btn" href="https://github.com/nicholas-holland-901/snake_game_brain" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
               <article className="card">
-                <img src="/rackgit_image.png" alt="rackgit_project" />
                 <h3>Rackgit</h3>
-                <p>FILL IN LATER Uses: Racket</p>
+                <p>WORK IN PROGRESS</p>
+                <h4>Uses: Racket</h4>
                 <a className="btn" href="https://github.com/nicholas-holland-901/rackgit" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
             </div>

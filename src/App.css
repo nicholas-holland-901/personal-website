@@ -468,6 +468,8 @@ main {
 	background: #b9b9b9;
 	border-radius: 0px;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 	box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 0.199);
 	text-align: left;
 	padding: 0 0 16px 0;
@@ -482,6 +484,13 @@ main {
 
 .card h3 {
 	margin: 12px 16px 6px 16px;
+	font-size: 32px;
+}
+
+.card h4 {
+	text-align: left;
+	margin: 12px 16px 6px 16px;
+	color: green;
 }
 
 .card p {
@@ -490,13 +499,20 @@ main {
 }
 
 .btn {
+	width: 89%;
 	display: inline-block;
-	margin: 8px 16px;
-	padding: 8px 14px;
+	margin: 8px 8px -5px 8px;
+	margin-top: auto;
+	padding: 8px 8px 8px 8px;
 	background: #111827;
 	color: #fff;
-	border-radius: 6px;
+	border-radius: 0px;
 	text-decoration: none;
+	text-align: center;
+}
+
+.btn:hover {
+	transform: translateY(-2px);
 }
 
 .education-list {
@@ -546,4 +562,3 @@ main {
 	.navbar_links { gap: 12px; font-size: 16px; padding: 0 12px; }
 	:root { --nav-h: 60px; }
 }
-
