@@ -58,23 +58,47 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
+            <div className="projects-bg-circles" aria-hidden="true">
+              <span className="projects-bg-circle circle1" />
+              <span className="projects-bg-circle circle2" />
+              <span className="projects-bg-circle circle3" />
+              <span className="projects-bg-circle circle4" />
+              <span className="projects-bg-circle circle5" />
+              <span className="projects-bg-circle circle6" />
+              <span className="projects-bg-circle circle7" />
+              <span className="projects-bg-circle circle8" />
+              <span className="projects-bg-circle circle9" />
+              <span className="projects-bg-circle circle10" />
+              <span className="projects-bg-circle circle11" />
+              <span className="projects-bg-circle circle12" />
+              <span className="projects-bg-circle circle13" />
+              <span className="projects-bg-circle circle14" />
+            </div>
             <div className="cards">
               <article className="card">
                 <h3>Self-Playing Flute</h3>
                 <p>Control for servo motors to input flute fingerings based on midi file</p>
-                <h4>Uses: C++, microcontroller</h4>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>C++</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Microcontroller</label>
+                </div>
                 <a className="btn" href="https://github.com/nicholas-holland-901/self_playing_flute" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
               <article className="card">
                 <h3>Neural Network from Scratch</h3>
                 <p>A neural network written in C from scratch to play snake game, using backpropagation for training and SDL3 for graphics and input handling</p>
-                <h4>Uses: C, SDL3</h4>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>C</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>SDL3</label>
+                </div>
                 <a className="btn" href="https://github.com/nicholas-holland-901/snake_game_brain" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
               <article className="card">
                 <h3>Rackgit</h3>
                 <p>WORK IN PROGRESS</p>
-                <h4>Uses: Racket</h4>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Racket</label>
+                </div>
                 <a className="btn" href="https://github.com/nicholas-holland-901/rackgit" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
             </div>
@@ -124,12 +148,22 @@ function App() {
                 <img src="/woodtrail_thumbnail.png" alt="woodtrail_game_thumbnail" />
                 <h3>Woodtrail</h3>
                 <p>A short low-poly horror game made in one week</p>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>C#</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Unity</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Blender</label>
+                </div>
                 <a className="btn" href="https://xxtinyturtxx.itch.io/woodtrail" target="_blank" rel="noopener noreferrer">View on itch.io</a>
               </article>
               <article className="card">
                 <img src="/pollykitten_thumbnail.png" alt="pollykitten_game_thumbnail" />
                 <h3>PollyKitten</h3>
                 <p>A browser rhythm game made in one week</p>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>GDScript</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Godot</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Aseprite</label>
+                </div>
                 <a className="btn" href="https://xxtinyturtxx.itch.io/pollykitten" target="_blank" rel="noopener noreferrer">View on itch.io</a>
               </article>
             </div>
