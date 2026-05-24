@@ -440,6 +440,7 @@ main {
 	width: 99%;
 	height: auto;
 	display: block;
+	content: url('bug_self.PNG')
 }
 
 .retro-content .hero-image:hover {

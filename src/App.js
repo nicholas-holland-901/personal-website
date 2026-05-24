@@ -5,6 +5,10 @@ import React, { useState } from 'react';
 import { CgBorderStyleSolid } from "react-icons/cg";
 import { CgMinimize } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
+import WoodtrailThumbnail from "./styling/woodtrail_thumbnail.png"
+import PollyKittenThumbnail from "./styling/pollykitten_thumbnail.png"
+import CellEstThumbnail from "./styling/pygame_platformer_image.png"
+import NUSeal from "./styling/nu_seal.png"
 
 function App() {
   return (
@@ -171,7 +175,7 @@ function App() {
           <div className="section-inner">
             <div className="cards">
               <article className="card">
-                <img src="/woodtrail_thumbnail.png" alt="woodtrail_game_thumbnail" />
+                <img src={ WoodtrailThumbnail } alt="woodtrail_game_thumbnail" />
                 <h3>Woodtrail</h3>
                 <p>A short low-poly horror game made in one week</p>
                 <div className="tag-holder">
@@ -182,7 +186,7 @@ function App() {
                 <a className="btn" href="https://xxtinyturtxx.itch.io/woodtrail" target="_blank" rel="noopener noreferrer">View on itch.io</a>
               </article>
               <article className="card">
-                <img src="/pollykitten_thumbnail.png" alt="pollykitten_game_thumbnail" />
+                <img src={ PollyKittenThumbnail } alt="pollykitten_game_thumbnail" />
                 <h3>PollyKitten</h3>
                 <p>A browser rhythm game made in one week</p>
                 <div className="tag-holder">
@@ -193,7 +197,7 @@ function App() {
                 <a className="btn" href="https://xxtinyturtxx.itch.io/pollykitten" target="_blank" rel="noopener noreferrer">View on itch.io</a>
               </article>
               <article className="card">
-                <img src="/pygame_platformer_image.png" alt="python_platformer_game_screenshot"/>
+                <img src={ CellEstThumbnail } alt="python_platformer_game_screenshot"/>
                 <h3>Cell-Est</h3>
                 <p>A simple platformer game inspired by Celeste</p>
                 <div className="tag-holder">
@@ -244,7 +248,7 @@ function App() {
             </div>
           </div>
           <div className="section-inner" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-            <img src="/nu_seal.png" alt="northwestern_university_seal" style={{ width: '150px', height: '150px' }} />
+            <img src={ NUSeal } alt="northwestern_university_seal" style={{ width: '150px', height: '150px' }} />
             <ul className="education-list">
               <strong>Northwestern University</strong>
               <li>
@@ -367,7 +371,7 @@ function RetroWindow() {
         </div>
       </div>
       <div className="retro-content">
-        <img className="hero-image" src="/bug_self.PNG" alt="Nicholas Holland" />
+        <img className="hero-image" src="bug_self.png" alt="Nicholas Holland" />
       </div>
     </div>
   );
