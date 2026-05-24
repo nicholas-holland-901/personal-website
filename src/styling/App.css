@@ -409,7 +409,7 @@ main {
 .window-controls { 
 	display: 
 	flex; 
-	gap: 6px; 
+	gap: 12px; 
 }
 
 .win-btn {
@@ -421,7 +421,8 @@ main {
 	justify-content: center;
 	background: #F2F3D9;
 	color: #111;
-	font-weight: 700;
+	font:100 12px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 500;
 	border-radius: 0px;
 	cursor: pointer;
 }
@@ -507,12 +508,13 @@ main {
 }
 
 .tag-holder {
-	margin: 8px 0 8px 0;
+	margin: auto 0 8px 0;
 	padding: 0 0 0 8px;
+	margin-top: auto;
 	display: flex;
 	align-self: flex-start;
 	align-items: center;
-	justify-content: flex-start;
+	margin-top: auto;
 	flex-wrap: wrap;
 }
 
@@ -534,6 +536,7 @@ main {
 	flex-direction: column;
 	box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 0.199);
 	text-align: left;
+	height: 100%;
 	padding: 0 0 16px 0;
 	width: 300px;
 	transition: transform 0.12s ease;
@@ -579,11 +582,25 @@ main {
 	width: 89%;
 	display: inline-block;
 	margin: 8px 8px -5px 8px;
-	margin-top: auto;
+	margin-top: 0;
 	padding: 8px 8px 8px 8px;
 	background: #111827;
 	color: #fff;
 	border-radius: 0px;
+	text-decoration: none;
+	text-align: center; 
+	transition: transform 0.12s ease;
+}
+
+.resume-btn {
+	width: 89%;
+	display: inline-block;
+	margin: 8px 8px -5px 8px;
+	margin-top: auto;
+	padding: 8px 8px 8px 8px;
+	background: #111827;
+	color: #fff;
+	border-radius: 5px;
 	text-decoration: none;
 	text-align: center; 
 	transition: transform 0.12s ease;

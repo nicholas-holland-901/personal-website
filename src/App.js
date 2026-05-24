@@ -2,6 +2,9 @@ import './styling/App.css';
 import './styling/BackgroundParticles.scss';
 import Navbar from './components/navbar/Navbar';
 import React, { useState } from 'react';
+import { CgBorderStyleSolid } from "react-icons/cg";
+import { CgMinimize } from "react-icons/cg";
+import { CgClose } from "react-icons/cg";
 
 function App() {
   return (
@@ -108,7 +111,7 @@ function App() {
                 <div className="tag-holder">
                   <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Racket</label>
                 </div>
-                <a className="btn" href="https://github.com/nicholas-holland-901/rackgit" target="_blank" rel="noopener noreferrer">View Repo</a>
+                <a className="btn" href="#" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article> */}
               <article className="card">
                 <h3>Assembly Flappy Bird</h3>
@@ -295,7 +298,8 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
-            <a className="btn" href="/resume.pdf" download>Download Resume (PDF)</a>
+            <p>Coming soon</p>
+            {/* <a className="resume-btn" href="#/resume.pdf" download>Download Resume (PDF)</a> */}
             <div className="resume-highlights">
               {/* <h3>temp</h3>
               <ul>
@@ -357,9 +361,9 @@ function RetroWindow() {
       >
         <span className="title">professional_headshot.png</span>
         <div className="window-controls">
-          <button className="win-btn" aria-label="Minimize">-</button>
-          <button className="win-btn" aria-label="Maximize">o</button>
-          <button className="win-btn" aria-label="Close">x</button>
+          <CgBorderStyleSolid />
+          <CgMinimize />
+          <CgClose />
         </div>
       </div>
       <div className="retro-content">
@@ -375,11 +379,11 @@ function StaticWindow({ children }) {
       className="retro-window static"
     >
       <div className="retro-titlebar">
-        <span className="title">About Me - v4.2</span>
+        <span className="title">about_me.txt</span>
         <div className="window-controls">
-          <button className="win-btn" aria-hidden>-</button>
-          <button className="win-btn" aria-hidden>o</button>
-          <button className="win-btn" aria-hidden>x</button>
+          <CgBorderStyleSolid />
+          <CgMinimize />
+          <CgClose />
         </div>
       </div>
       <div className="retro-content">
