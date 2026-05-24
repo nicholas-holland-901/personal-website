@@ -568,7 +568,11 @@ main {
 }
 
 .card-list {
-	margin: 0px 16px 8px 0px;
+	margin: -8px 16px 8px 0px;
+}
+
+.card-list li {
+	margin: 16px 0;
 }
 
 .btn {

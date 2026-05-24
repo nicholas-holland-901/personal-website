@@ -76,11 +76,11 @@ function App() {
             <div className="cards">
               <article className="card">
                 <h3>Self-Playing Flute</h3>
-                <p>A flute that can play itself using servo motors and MIDI files.</p>
+                <p>A flute that can play itself using servo motors and MIDI files</p>
                 <ul className="card-list">
-                  <li>Constructed a mount fitted for a standard concert C flute which uses servo motors capable of 34 different note/fingering combinations.</li>
-                  <li>Implemented file handling able to read Type 0 MIDI files and convert note data to readable format.</li>
-                  <li>Controlled 9 servo motors simultaneously by implementing PCA9685 PWM driver board with an Elegoo microcontroller.</li>
+                  <li>Constructed a mount fitted for a standard concert C flute which uses servo motors capable of 34 different note/fingering combinations</li>
+                  <li>Implemented file handling able to read Type 0 MIDI files and convert note data to readable format</li>
+                  <li>Controlled 9 servo motors simultaneously by implementing PCA9685 PWM driver board with an Elegoo microcontroller</li>
                 </ul>
                 <div className="tag-holder">
                   <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>C++</label>
@@ -90,11 +90,11 @@ function App() {
               </article>
               <article className="card">
                 <h3>Neural Network from Scratch</h3>
-                <p>A neural network written in C from scratch to play snake game.</p>
+                <p>A neural network written in C from scratch to play snake game</p>
                 <ul className="card-list">
-                  <li>Designed a feedforward neural network from scratch in C to play snake game.</li>
-                  <li>Applied backpropagation and reinforcement learning techniques in order to maximize performance.</li>
-                  <li>Created snake game in C using SDL3 library to display graphics and handle input.</li>
+                  <li>Designed a feedforward neural network from scratch in C to play snake game</li>
+                  <li>Applied backpropagation and reinforcement learning techniques in order to maximize performance</li>
+                  <li>Created snake game in C using SDL3 library to display graphics and handle input</li>
                 </ul>
                 <div className="tag-holder">
                   <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>C</label>
@@ -102,13 +102,27 @@ function App() {
                 </div>
                 <a className="btn" href="https://github.com/nicholas-holland-901/snake_game_brain" target="_blank" rel="noopener noreferrer">View Repo</a>
               </article>
-              <article className="card">
+              {/* <article className="card">
                 <h3>Rackgit</h3>
                 <p>WORK IN PROGRESS</p>
                 <div className="tag-holder">
                   <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Racket</label>
                 </div>
                 <a className="btn" href="https://github.com/nicholas-holland-901/rackgit" target="_blank" rel="noopener noreferrer">View Repo</a>
+              </article> */}
+              <article className="card">
+                <h3>Assembly Flappy Bird</h3>
+                <p>A recreation of Flappy Bird written entirely in ARM32 assembly</p>
+                <ul className="card-list">
+                  <li>Implemented sprite rotation, collision detection, background scrolling, and gravity in ARM32 assembly</li>
+                  <li>Made as the final project for Northwestern University's COMP_ENG 205: Fundamentals of Computer System Software</li>
+                </ul>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>ARM32</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Assembly</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>CPUlater</label>
+                </div>
+                <a className="btn" href="https://youtu.be/Ai_8R0GnEHE" target="_blank" rel="noopener noreferrer">View Demo</a>
               </article>
             </div>
           </div>
@@ -361,7 +375,7 @@ function StaticWindow({ children }) {
       className="retro-window static"
     >
       <div className="retro-titlebar">
-        <span className="title">About Me - v1.9</span>
+        <span className="title">About Me - v4.2</span>
         <div className="window-controls">
           <button className="win-btn" aria-hidden>-</button>
           <button className="win-btn" aria-hidden>o</button>
