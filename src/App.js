@@ -76,7 +76,12 @@ function App() {
             <div className="cards">
               <article className="card">
                 <h3>Self-Playing Flute</h3>
-                <p>Control for servo motors to input flute fingerings based on midi file</p>
+                <p>A flute that can play itself using servo motors and MIDI files.</p>
+                <ul className="card-list">
+                  <li>Constructed a mount fitted for a standard concert C flute which uses servo motors capable of 34 different note/fingering combinations.</li>
+                  <li>Implemented file handling able to read Type 0 MIDI files and convert note data to readable format.</li>
+                  <li>Controlled 9 servo motors simultaneously by implementing PCA9685 PWM driver board with an Elegoo microcontroller.</li>
+                </ul>
                 <div className="tag-holder">
                   <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>C++</label>
                   <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Microcontroller</label>
@@ -85,7 +90,12 @@ function App() {
               </article>
               <article className="card">
                 <h3>Neural Network from Scratch</h3>
-                <p>A neural network written in C from scratch to play snake game, using backpropagation for training and SDL3 for graphics and input handling</p>
+                <p>A neural network written in C from scratch to play snake game.</p>
+                <ul className="card-list">
+                  <li>Designed a feedforward neural network from scratch in C to play snake game.</li>
+                  <li>Applied backpropagation and reinforcement learning techniques in order to maximize performance.</li>
+                  <li>Created snake game in C using SDL3 library to display graphics and handle input.</li>
+                </ul>
                 <div className="tag-holder">
                   <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>C</label>
                   <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>SDL3</label>
@@ -165,6 +175,16 @@ function App() {
                 </div>
                 <a className="btn" href="https://xxtinyturtxx.itch.io/pollykitten" target="_blank" rel="noopener noreferrer">View on itch.io</a>
               </article>
+              <article className="card">
+                <img src="/pygame_platformer_image.png" alt="python_platformer_game_screenshot"/>
+                <h3>Cell-Est</h3>
+                <p>A simple platformer game inspired by Celeste</p>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Python</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Pygame</label>
+                </div>
+                <a className="btn" href="https://github.com/nicholas-holland-901/cell_est_pygame_platformer" target="_blank" rel="noopener noreferrer">View Repo</a>
+              </article>
             </div>
           </div>
           {/* <div className="section-banner bottom">
@@ -206,11 +226,18 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="section-inner">
+          <div className="section-inner" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <img src="/nu_seal.png" alt="northwestern_university_seal" style={{ width: '150px', height: '150px' }} />
             <ul className="education-list">
               <strong>Northwestern University</strong>
               <li>
                 <span>Bachelor of Science in Computer Engineering</span>
+              </li>
+              <li>
+                <span>Sept. 2025-Present</span>
+              </li>
+              <li>
+                <span>GPA: 4.0</span>
               </li>
             </ul>
           </div>
@@ -256,12 +283,12 @@ function App() {
           <div className="section-inner">
             <a className="btn" href="/resume.pdf" download>Download Resume (PDF)</a>
             <div className="resume-highlights">
-              <h3>temp</h3>
+              {/* <h3>temp</h3>
               <ul>
                 <li>temp</li>
                 <li>temp</li>
                 <li>temp</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
           {/* <div className="section-banner bottom">
@@ -314,7 +341,7 @@ function RetroWindow() {
         className="retro-titlebar"
         style={{ touchAction: 'none' }}
       >
-        <span className="title">Last Photo Taken - v1.5</span>
+        <span className="title">professional_headshot.png</span>
         <div className="window-controls">
           <button className="win-btn" aria-label="Minimize">-</button>
           <button className="win-btn" aria-label="Maximize">o</button>
