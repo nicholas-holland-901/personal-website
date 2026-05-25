@@ -228,60 +228,6 @@ function App() {
           </div> */}
         </section>
 
-        <section id="education" className="section" data-banner="Education">
-          <div className="section-banner top">
-            <div className="banner-track">
-              <div className="banner-list">
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-              </div>
-              <div className="banner-list">
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-              </div>
-            </div>
-          </div>
-          <div className="section-inner" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-            <img src={ NUSeal } alt="northwestern_university_seal" style={{ width: '150px', height: '150px' }} />
-            <ul className="education-list">
-              <strong>Northwestern University</strong>
-              <li>
-                <span>Bachelor of Science in Computer Engineering</span>
-              </li>
-              <li>
-                <span>Sept. 2025-Present</span>
-              </li>
-              <li>
-                <span>GPA: 4.0</span>
-              </li>
-            </ul>
-          </div>
-          {/* <div className="section-banner bottom">
-            <div className="banner-track">
-              <div className="banner-list">
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-              </div>
-              <div className="banner-list">
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-                <span className="banner-item">Education</span>
-              </div>
-            </div>
-          </div> */}
-        </section>
-
         <section id="resume" className="section" data-banner="Resume">
           <div className="section-banner top">
             <div className="banner-track">
@@ -301,36 +247,84 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="section-inner">
-            <p>Coming soon</p>
-            {/* <a className="resume-btn" href="#/resume.pdf" download>Download Resume (PDF)</a> */}
-            <div className="resume-highlights">
-              {/* <h3>temp</h3>
-              <ul>
-                <li>temp</li>
-                <li>temp</li>
-                <li>temp</li>
-              </ul> */}
+          <div className="split-section-holder">
+            <div className="split-section-inner-education">
+              <img src={ NUSeal } alt="northwestern_university_seal" style={{ width: '150px', height: '150px' }} />
+              <ul className="education-list">
+                <strong>Northwestern University</strong>
+                <li>
+                  <span>Bachelor of Science in Computer Engineering</span>
+                </li>
+                <li>
+                  <span>Sept. 2025-Present</span>
+                </li>
+                <li>
+                  <span>GPA: 4.0</span>
+                </li>
+              </ul>
+            </div>
+            <div className="divider">
+            </div>
+            <div className="split-section-inner-resume">
+              <p>Coming Soon</p>
             </div>
           </div>
-          {/* <div className="section-banner bottom">
+
+        </section>
+        <section id="knitting" className="section" data-banner="Knitting">
+          <div className="section-banner top">
             <div className="banner-track">
               <div className="banner-list">
-                <span className="banner-item">Resume</span>
-                <span className="banner-item">Resume</span>
-                <span className="banner-item">Resume</span>
-                <span className="banner-item">Resume</span>
-                <span className="banner-item">Resume</span>
+                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Knitting</span>
               </div>
               <div className="banner-list">
-                <span className="banner-item">Resume</span>
-                <span className="banner-item">Resume</span>
-                <span className="banner-item">Resume</span>
-                <span className="banner-item">Resume</span>
-                <span className="banner-item">Resume</span>
+                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Knitting</span>
               </div>
             </div>
-          </div> */}
+          </div>
+          <div className="section-inner">
+            <div className="cards">
+              <article className="card">
+                <img src={ WoodtrailThumbnail } alt="woodtrail_game_thumbnail" />
+                <h3>Bloom Pullover</h3>
+                <p>Pattern by woolbirdx</p>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Knit</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Colorwork</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>In the Round</label>
+                </div>
+                <a className="btn" href="https://www.etsy.com/listing/1868399215/english-knitting-pattern-bloom-pullover?ref=shop_home_feat_2&sr_prefetch=1&pf_from=shop_home&bes=1&sts=1&dd=1&logging_key=925dbeb0e9ac01fa866d1c4f7e51c24407de1c52%3A1868399215" target="_blank" rel="noopener noreferrer">View Pattern on Etsy</a>
+              </article>
+              <article className="card">
+                <img src={ PollyKittenThumbnail } alt="pollykitten_game_thumbnail" />
+                <h3>Arm Warmers</h3>
+                <p>Pattern by Louise Bollanos</p>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Knit</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Flat</label>
+                </div>
+                <a className="btn" href="https://www.handylittleme.com/fingerless-mittens-pattern/" target="_blank" rel="noopener noreferrer">View Pattern Source</a>
+              </article>
+              <article className="card">
+                <img src={ CellEstThumbnail } alt="python_platformer_game_screenshot"/>
+                <h3>Fish</h3>
+                <p>Pattern by Tatyana Grigoryan</p>
+                <div className="tag-holder">
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Knit</label>
+                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Flat</label>
+                </div>
+                <a className="btn" href="https://www.ravelry.com/patterns/library/anchovy-addict" target="_blank" rel="noopener noreferrer">View Pattern on Ravelry</a>
+              </article>
+            </div>
+          </div>
         </section>
       </main>
     </div>

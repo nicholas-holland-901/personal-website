@@ -28,8 +28,8 @@ const Navbar = () => {
                 <a href="#home" onClick={(e) => handleNav(e, 'home')}>Home</a>
                 <a href="#projects" onClick={(e) => handleNav(e, 'projects')}>Projects</a>
                 <a href="#games" onClick={(e) => handleNav(e, 'games')}>Games</a>
-                <a href="#education" onClick={(e) => handleNav(e, 'education')}>Education</a>
                 <a href="#resume" onClick={(e) => handleNav(e, 'resume')}>Resume</a>
+                <a href="#knitting" onClick={(e) => handleNav(e, 'knitting')}>Knitting</a>
                 <p style={{ color: 'white' }}>|</p>
                 <a href="https://github.com/nicholas-holland-901" target="_blank" rel="noopener noreferrer">Github</a>
                 <a href="https://www.linkedin.com/in/nicholas-holland-307984399/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

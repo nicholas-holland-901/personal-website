@@ -485,8 +485,7 @@ main {
 
 
 #games { background: #646627; }
-#education { background: #4E2A84; }
-#resume { background: #F2F3D9; }
+#knitting { background: #8B4513; }
 
 /* tags */
 .tag {
@@ -612,10 +611,46 @@ main {
 	transition: transform 0.12s ease;
 }
 
+.split-section-holder {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+}
+
+.divider {
+	width: 0px;
+	margin: 0 -20px;
+	min-height: calc(100vh - var(--nav-h));
+}
+
+#resume {
+	padding: 0;
+	margin: 0;
+}
+
+.split-section-inner-education, .split-section-inner-resume {
+	display: flex;
+	align-items: center;
+	min-height: calc(100vh - var(--nav-h));
+	width: 100%;
+	justify-content: center;
+}
+
+.split-section-inner-education {
+	background: #4E2A84;
+}
+
+.split-section-inner-resume {
+	background: #F2F3D9;
+}
+
 .education-list {
 	list-style: none;
 	padding: 0;
 	margin-top: 16px;
+	padding-left: 3%;
 	color: white;
 }
 
