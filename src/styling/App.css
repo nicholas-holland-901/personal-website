@@ -348,18 +348,18 @@ main {
 	box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
-/* retro window for hero image */
 
-/* letters that evade the mouse */
+
+
 .letter {
 	display: inline-block;
 	transition: transform 0.12s ease;
-	color: #000; /* ensure black letters */
+	color: #000;
 	pointer-events: none;
 }
 
 .hero-title, .hero-sub {
-	color: #000; /* fallback for text */
+	color: #000;
 }
 
 .retro-window {
@@ -370,22 +370,8 @@ main {
 	border-radius: 0;
 	overflow: hidden;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	position: static; /* default: in-flow */
+	position: static;
 	transform: none;
-}
-
-.retro-window.draggable {
-	position: absolute;
-	left: 15%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	z-index: 2000;
-}
-
-.retro-window.static { max-width: 520px; flex: 1 1 420px; }
-
-.hero-copy-inner {
-	padding: 12px 8px;
 }
 
 .retro-titlebar {
@@ -407,8 +393,7 @@ main {
 }
 
 .window-controls { 
-	display: 
-	flex; 
+	display: flex; 
 	gap: 12px; 
 }
 
@@ -438,7 +423,7 @@ main {
 	border-radius: 0;
 	border: 2px solid #000;
 	width: 99%;
-	height: auto;
+	height: 100%;
 	display: block;
 	content: url('bug_self.PNG')
 }
@@ -447,28 +432,8 @@ main {
 	content: url('bug_self_eyes_closed.PNG');
 }
 
-/* states */
-.retro-window.minimized {
-	height: auto;
-}
-.retro-window.minimized .retro-content {
-	display: none;
-}
 
-.retro-window.maximized {
-	position: fixed;
-	top: calc(var(--nav-h) + 20px);
-	left: 50%;
-	transform: translateX(-50%);
-	width: calc(90vw);
-	max-width: none;
-	z-index: 3000;
-	box-shadow: 0 20px 40px rgba(0,0,0,0.45);
-}
 
-.retro-window.hidden { display: none; }
-
-/* section backgrounds */
 #projects { background: #7C3626; }
 
 .projects-bg-circles {
@@ -482,12 +447,9 @@ main {
 	mask-composite: exclude;
 }
 
-
-
 #games { background: #646627; }
 #knitting { background: #8B4513; }
 
-/* tags */
 .tag {
 	display: flex;
 	padding: 4px 8px;
@@ -495,6 +457,8 @@ main {
 	font:100 12px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	border-radius: 5px;
 	margin: 0 4px 8px 0;
+	background: #4E2A84;
+	color: #FEFFE6;
 	width:auto;
 	font-size: 1rem;
 	font-weight: 600;
@@ -518,12 +482,20 @@ main {
 	flex-wrap: wrap;
 }
 
-/* cards */
-.cards {
+/* .cards {
 	z-index: 10;
 	display: grid;
 	grid-template-columns: auto auto auto;
 	gap: 24px;
+	margin-top: 24px;
+	position: relative;
+} */
+
+.cards {
+	z-index: 10;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 40px 24px;
 	margin-top: 24px;
 	position: relative;
 }
@@ -540,22 +512,35 @@ main {
 	padding: 0 0 16px 0;
 	width: 300px;
 	transition: transform 0.12s ease;
+	border: 2px solid #000;
+
 }
 
 .card:hover {
-	transform: translateY(-20px);
+	transform: translateY(-2px);
 	transition: transform 0.12s ease;
+}
+
+.card-titlebar {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	padding: 5px 10px;
+	background: #2660A4;
+	color: #fff;
+	font-size: 14px;
+	border-bottom: 2px solid #000;
 }
 
 
 .card img {
-	width: 315px;
-	height: 250px;
-	object-fit: cover;
+	margin: 8px 8px 8px 8px;
+	object-fit: contain;
+	border: 2px solid #000;
 }
 
 .card h3 {
-	margin: 12px 16px 6px 16px;
+	margin: 12px 24px 6px 16px;
 	font-size: 32px;
 }
 
@@ -662,7 +647,7 @@ main {
 	margin-top: 16px;
 }
 
-/* responsive */
+
 @media (max-width: 1000px) {
 	.cards { grid-template-columns: repeat(2, 1fr); }
 	.navbar_links { gap: 32px; font-size: 20px; }
@@ -676,7 +661,7 @@ main {
 		align-items: center;
 	}
 
-	/* place retro window normally in document flow on small screens */
+
 	.retro-window {
 		position: static;
 		transform: none;
