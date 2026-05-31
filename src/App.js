@@ -9,6 +9,8 @@ import WoodtrailThumbnail from "./styling/woodtrail_thumbnail.png"
 import PollyKittenThumbnail from "./styling/pollykitten_thumbnail.png"
 import CellEstThumbnail from "./styling/pygame_platformer_image.png"
 import NUSeal from "./styling/nu_seal.png"
+import HeadshotEyesOpen from "./styling/bug_self.PNG";
+import HeadshotEyesClosed from "./styling/bug_self_eyes_closed.PNG";
 
 function App() {
   return (
@@ -428,7 +430,10 @@ function App() {
   );
 }
 
+
 function RetroWindow() {
+  const [hovered, setHovered] = React.useState(false);
+
   return (
     <div className="retro-window">
       <div className="retro-titlebar">
@@ -439,8 +444,9 @@ function RetroWindow() {
           <CgClose />
         </div>
       </div>
+
       <div className="retro-content">
-        <img className="hero-image" alt="Nicholas Holland" />
+        <img className="hero-image" src={hovered ? HeadshotEyesClosed : HeadshotEyesOpen} alt="Headshot" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}/>
       </div>
     </div>
   );

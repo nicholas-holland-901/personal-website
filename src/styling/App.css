@@ -425,12 +425,8 @@ main {
 	width: 400px;
 	height: auto;
 	display: block;
-	content: url('bug_self.PNG')
 }
 
-.retro-content .hero-image:hover {
-	content: url('bug_self_eyes_closed.PNG');
-}
 
 
 
