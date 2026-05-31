@@ -302,7 +302,7 @@ main {
 
 .hero-content {
 	max-width: 1100px;
-	width: 100%;
+	width: auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -363,7 +363,7 @@ main {
 }
 
 .retro-window {
-	width: 100%;
+	width: auto;
 	max-width: 520px;
 	border: 2px solid #000;
 	box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.25);
@@ -420,10 +420,10 @@ main {
 }
 
 .retro-content .hero-image {
-	border-radius: 0;
+	border-radius: 0px;
 	border: 2px solid #000;
-	width: 99%;
-	height: 100%;
+	width: 400px;
+	height: auto;
 	display: block;
 	content: url('bug_self.PNG')
 }
@@ -457,7 +457,7 @@ main {
 	font:100 12px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	border-radius: 5px;
 	margin: 0 4px 8px 0;
-	background: #4E2A84;
+	background: #2660A4;
 	color: #FEFFE6;
 	width:auto;
 	font-size: 1rem;
@@ -500,7 +500,23 @@ main {
 	position: relative;
 }
 
-.card {
+.card#project {
+	background: #f2f3d9; /* #b9b9b9; */
+	border-radius: 0px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 0.15);
+	text-align: left;
+	height: 100%;
+	margin-bottom: -8px;
+	padding: 0px;
+	width: 300px;
+	transition: transform 0.12s ease;
+	pointer-events: none;
+}
+
+.card#game {
 	background: #f2f3d9; /* #b9b9b9; */
 	border-radius: 0px;
 	overflow: hidden;
@@ -512,8 +528,20 @@ main {
 	padding: 0 0 16px 0;
 	width: 300px;
 	transition: transform 0.12s ease;
-	border: 2px solid #000;
+}
 
+.card#knitting {
+	background: #f2f3d9; /* #b9b9b9; */
+	border-radius: 0px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 0.199);
+	text-align: left;
+	height: 100%;
+	padding: 0 0 16px 0;
+	width: 300px;
+	transition: transform 0.12s ease;
 }
 
 .card:hover {
@@ -521,22 +549,10 @@ main {
 	transition: transform 0.12s ease;
 }
 
-.card-titlebar {
-	display: flex;
-	justify-content: flex-end;
-	gap: 8px;
-	padding: 5px 10px;
-	background: #2660A4;
-	color: #fff;
-	font-size: 14px;
-	border-bottom: 2px solid #000;
-}
 
 
 .card img {
-	margin: 8px 8px 8px 8px;
 	object-fit: contain;
-	border: 2px solid #000;
 }
 
 .card h3 {
@@ -564,9 +580,9 @@ main {
 }
 
 .btn {
-	width: 89%;
+	width: auto;
 	display: inline-block;
-	margin: 8px 8px -5px 8px;
+	margin: 8px 8px 8px 8px;
 	margin-top: 0;
 	padding: 8px 8px 8px 8px;
 	background: #111827;
@@ -646,6 +662,79 @@ main {
 .resume-highlights {
 	margin-top: 16px;
 }
+
+
+.modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 1000;
+}
+
+.modal-content {
+	background: #F2F3D9;
+	margin: 10% auto;
+	padding: 0px;
+	width: fit-content;
+	height: fit-content;
+	border-radius: 0px;
+	position: relative;
+	border: 2px solid black;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 0.15);
+	text-align: left;
+}
+
+.modal-content p {
+	margin: 8px 8px 8px 16px;
+	color: #444;
+}
+
+.modal-titlebar {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0px 0px 0px 0px;
+	gap: 8px;
+	padding: 5px 10px;
+	background: #2660A4;
+	color: #fff;
+	font-size: 14px;
+	border-bottom: 2px solid #000;
+}
+
+.card-button-hidden {
+	pointer-events: all;
+	cursor: pointer;
+	background: #f2f3d9; /* #b9b9b9; */
+	border-radius: 0px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	border: 0;
+	text-align: left;
+	height: 100%;
+	padding: 0 0 16px 0;
+	width: 300px;
+	transition: transform 0.12s ease;
+}
+
+.modal-overlay h2 {
+	font-size: 32px;
+	margin: 8px 0px 0px 8px;
+}
+
+.close-btn {
+	position: absolute;
+	top: 0px; right: 10px;
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0);
+	cursor: pointer;
+}
+
 
 
 @media (max-width: 1000px) {

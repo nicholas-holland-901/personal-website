@@ -82,11 +82,8 @@ function App() {
             </div>
             <div className="cards">
               <article id="project" className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
+
+              <button data-modal-target="#modal1" className="card-button-hidden">  
                 <h3>Self-Playing Flute</h3>
                 <p>A flute that can play itself using servo motors and MIDI files</p>
                 {/* <ul className="card-list">
@@ -98,74 +95,65 @@ function App() {
                   <label className="tag">C++</label>
                   <label className="tag">Microcontroller</label>
                 </div>
-                <a className="btn" href="https://github.com/nicholas-holland-901/self_playing_flute" target="_blank" rel="noopener noreferrer">View More</a>
+                <a className="btn">View More</a>
+              </button>
+
               </article>
               <article id="project" className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
+
+              <button data-modal-target="#modal2"  className="card-button-hidden">
                 <h3>Neural Network from Scratch</h3>
                 <p>A neural network written in C from scratch to play snake game</p>
-                {/* <ul className="card-list">
-                  <li>Designed a feedforward neural network from scratch in C to play snake game</li>
-                  <li>Applied backpropagation and reinforcement learning techniques in order to maximize performance</li>
-                  <li>Created snake game in C using SDL3 library to display graphics and handle input</li>
-                </ul> */}
                 <div className="tag-holder">
                   <label className="tag">C</label>
                   <label className="tag">SDL3</label>
                 </div>
-                <a className="btn" href="https://github.com/nicholas-holland-901/snake_game_brain" target="_blank" rel="noopener noreferrer">View More</a>
+                <a className="btn">View More</a>
+              </button>
+              
               </article>
-
-              {/* <article id="project" className="card">
-                <h3>Rackgit</h3>
-                <p>WORK IN PROGRESS</p>
-                <div className="tag-holder">
-                  <label className="tag" style={{ color: '#FEFFE6', background: '#2660A4' }}>Racket</label>
-                </div>
-                <a className="btn" href="#" target="_blank" rel="noopener noreferrer">View Repo</a>
-              </article> */}
               <article id="project" className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
+
+
+              <button data-modal-target="#modal3"  className="card-button-hidden">
                 <h3>Assembly Flappy Bird</h3>
                 <p>A recreation of Flappy Bird written entirely in ARM32 assembly</p>
-                {/* <ul className="card-list">
-                  <li>Implemented sprite rotation, collision detection, background scrolling, and gravity in ARM32 assembly</li>
-                  <li>Made as the final project for Northwestern University's COMP_ENG 205: Fundamentals of Computer System Software</li>
-                </ul> */}
                 <div className="tag-holder">
                   <label className="tag">ARM32</label>
                   <label className="tag">Assembly</label>
                   <label className="tag">CPUlater</label>
                 </div>
-                <a className="btn" href="https://youtu.be/Ai_8R0GnEHE" target="_blank" rel="noopener noreferrer">View More</a>
+                <a className="btn">View More</a>
+              </button>
+              
               </article>
-              <article id="project" className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
+              {/* <article id="project" className="card">
+
+              <button data-modal-target="#modal4"  className="card-button-hidden">
                 <h3>Physical Audio Visualizer</h3>
                 <p>A soldered 8x8 LED matrix that can display audio from a microphone</p>
-                {/* <ul className="card-list">
-                  <li>Implemented sprite rotation, collision detection, background scrolling, and gravity in ARM32 assembly</li>
-                  <li>Made as the final project for Northwestern University's COMP_ENG 205: Fundamentals of Computer System Software</li>
-                </ul> */}
                 <div className="tag-holder">
                   <label className="tag">Soldering</label>
                   <label className="tag">Circuit</label>
                   <label className="tag">ESP-32</label>
                 </div>
-                <a className="btn" href="#" target="_blank" rel="noopener noreferrer">View More</a>
+                <a className="btn">View More</a>
+              </button>
+
               </article>
+              <article id="project" className="card">
+
+              <button data-modal-target="#modal5"  className="card-button-hidden">
+                <h3>Rackgit (Github Clone)</h3>
+                <p>A small recreation of GitHub written entirely in the Lisp-like language Racket</p>
+                <div className="tag-holder">
+                  <label className="tag">Racket</label>
+                  <label className="tag">Git</label>
+                </div>
+                <a className="btn" href="#" target="_blank" rel="noopener noreferrer">View More</a>
+              </button>
+              
+              </article> */}
             </div>
           </div>
         </section>
@@ -192,11 +180,6 @@ function App() {
           <div className="section-inner">
             <div className="cards">
               <article id="game" className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
                 <img src={ WoodtrailThumbnail } alt="woodtrail_game_thumbnail" />
                 <h3>Woodtrail</h3>
                 <p>A short low-poly horror game made in one week</p>
@@ -208,11 +191,6 @@ function App() {
                 <a className="btn" href="https://xxtinyturtxx.itch.io/woodtrail" target="_blank" rel="noopener noreferrer">View on itch.io</a>
               </article>
               <article id="game" className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
                 <img src={ PollyKittenThumbnail } alt="pollykitten_game_thumbnail" />
                 <h3>PollyKitten</h3>
                 <p>A browser rhythm game made in one week</p>
@@ -224,11 +202,6 @@ function App() {
                 <a className="btn" href="https://xxtinyturtxx.itch.io/pollykitten" target="_blank" rel="noopener noreferrer">View on itch.io</a>
               </article>
               <article id="game" className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
                 <img src={ CellEstThumbnail } alt="python_platformer_game_screenshot"/>
                 <h3>Cell-Est</h3>
                 <p>A simple platformer game inspired by Celeste</p>
@@ -280,7 +253,11 @@ function App() {
             <div className="divider">
             </div>
             <div className="split-section-inner-resume">
+
+
               <p>Coming Soon</p>
+
+
             </div>
           </div>
 
@@ -306,12 +283,7 @@ function App() {
           </div>
           <div className="section-inner">
             <div className="cards">
-              <article className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
+              <article id="knitting" className="card">
                 <img src={ WoodtrailThumbnail } alt="woodtrail_game_thumbnail" />
                 <h3>Bloom Pullover</h3>
                 <p>Pattern by woolbirdx</p>
@@ -322,12 +294,7 @@ function App() {
                 </div>
                 <a className="btn" href="https://www.etsy.com/listing/1868399215/english-knitting-pattern-bloom-pullover?ref=shop_home_feat_2&sr_prefetch=1&pf_from=shop_home&bes=1&sts=1&dd=1&logging_key=925dbeb0e9ac01fa866d1c4f7e51c24407de1c52%3A1868399215" target="_blank" rel="noopener noreferrer">View Pattern on Etsy</a>
               </article>
-              <article className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
+              <article id="knitting" className="card">
                 <img src={ PollyKittenThumbnail } alt="pollykitten_game_thumbnail" />
                 <h3>Arm Warmers</h3>
                 <p>Pattern by Louise Bollanos</p>
@@ -337,12 +304,7 @@ function App() {
                 </div>
                 <a className="btn" href="https://www.handylittleme.com/fingerless-mittens-pattern/" target="_blank" rel="noopener noreferrer">View Pattern Source</a>
               </article>
-              <article className="card">
-                <div className="card-titlebar">
-                  <CgBorderStyleSolid />
-                  <CgMinimize />
-                  <CgClose />
-                </div>
+              <article id="knitting" className="card">
                 <img src={ CellEstThumbnail } alt="python_platformer_game_screenshot"/>
                 <h3>Fish</h3>
                 <p>Pattern by Tatyana Grigoryan</p>
@@ -355,6 +317,112 @@ function App() {
             </div>
           </div>
         </section>
+
+        <div id="modal1" class="modal-overlay">
+          <div class="modal-content">
+          <div className="modal-titlebar">
+            <CgClose />
+          </div>
+            <span class="close-btn" data-close>&times;</span>
+            <h2>Self-Playing Flute</h2>
+            <p>A flute that can play itself using servo motors and MIDI files</p>
+            <ul className="card-list">
+                  <li>Constructed a mount fitted for a standard concert C flute which uses servo motors capable of 34 different note/fingering combinations</li>
+                  <li>Implemented file handling able to read Type 0 MIDI files and convert note data to readable format</li>
+                  <li>Controlled 9 servo motors simultaneously by implementing PCA9685 PWM driver board with an Elegoo microcontroller</li>
+            </ul>
+            <div className="tag-holder">
+              <label className="tag">C++</label>
+              <label className="tag">Microcontroller</label>
+            </div>
+            <a className="btn" href="https://github.com/nicholas-holland-901/self_playing_flute" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+
+        <div id="modal2" class="modal-overlay">
+          <div class="modal-content">
+          <div className="modal-titlebar">
+            <CgClose />
+          </div>
+            <span class="close-btn" data-close>&times;</span>
+            <h2>Neural Network from Scratch</h2>
+            <p>A neural network written in C from scratch to play snake game</p>
+            <ul className="card-list">
+              <li>Designed a feedforward neural network from scratch in C to play snake game</li>
+              <li>Applied backpropagation and reinforcement learning techniques in order to maximize performance</li>
+              <li>Created snake game in C using SDL3 library to display graphics and handle input</li>
+            </ul>
+            <div className="tag-holder">
+              <label className="tag">C</label>
+              <label className="tag">SDL3</label>
+            </div>
+            <a className="btn" href="https://github.com/nicholas-holland-901/snake_game_brain" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+
+        <div id="modal3" class="modal-overlay">
+          <div class="modal-content">
+          <div className="modal-titlebar">
+            <CgClose />
+          </div>
+            <span class="close-btn" data-close>&times;</span>
+            <h2>Assembly Flappy Bird</h2>
+            <p>A recreation of Flappy Bird written entirely in ARM32 assembly</p>
+            <ul className="card-list">
+              <li>Implemented sprite rotation, collision detection, background scrolling, and gravity in ARM32 assembly</li>
+              <li>Made as the final project for Northwestern University's COMP_ENG 205: Fundamentals of Computer System Software</li>
+            </ul>
+            <div className="tag-holder">
+              <label className="tag">ARM32</label>
+              <label className="tag">Assembly</label>
+              <label className="tag">CPUlater</label>
+            </div>
+            <a className="btn" href="https://youtu.be/Ai_8R0GnEHE" target="_blank" rel="noopener noreferrer">View Demo on Youtube</a>
+          </div>
+        </div>
+
+        <div id="modal4" class="modal-overlay">
+          <div class="modal-content">
+          <div className="modal-titlebar">
+            <CgClose />
+          </div>
+            <span class="close-btn" data-close>&times;</span>
+            <h2>Physical Audio Visualizer</h2>
+            <p>A soldered 8x8 LED matrix that can display audio from a microphone</p>
+            <ul className="card-list">
+              <li>TEMP</li>
+              <li>TEMP</li>
+            </ul>
+            <div className="tag-holder">
+              <label className="tag">Soldering</label>
+              <label className="tag">Circuit</label>
+              <label className="tag">ESP-32</label>
+            </div>
+            <a className="btn" href="#" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+
+        <div id="modal5" class="modal-overlay">
+          <div class="modal-content">
+          <div className="modal-titlebar">
+            <CgClose />
+          </div>
+            <span class="close-btn" data-close>&times;</span>
+            <h2>Rackgit (Github Clone)</h2>
+            <p>A small recreation of GitHub written entirely in the Lisp-like language Racket</p>
+            <ul className="card-list">
+                  <li>TEMP</li>
+                  <li>TEMP</li>
+                  <li>TEMP</li>
+            </ul>
+            <div className="tag-holder">
+              <label className="tag">C++</label>
+              <label className="tag">Microcontroller</label>
+            </div>
+            <a className="btn" href="https://github.com/nicholas-holland-901/rackgit" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </div>
+        </div>
+
       </main>
     </div>
   );
@@ -446,5 +514,32 @@ function HeroText({ text, className }) {
     </span>
   );
 }
+
+
+document.addEventListener('click', (event) => {
+  const openBtn = event.target.closest('[data-modal-target]');
+
+  if (openBtn) {
+    const modal = document.querySelector(
+      openBtn.getAttribute('data-modal-target')
+    );
+    if (modal) modal.style.display = 'block';
+    return;
+  }
+
+  const closeBtn = event.target.closest('[data-close]');
+
+  if (closeBtn) {
+    const overlay = closeBtn.closest('.modal-overlay');
+    if (overlay) overlay.style.display = 'none';
+    return;
+  }
+
+  if (event.target.classList.contains('modal-overlay')) {
+    event.target.style.display = 'none';
+  }
+});
+
+
 
 export default App;
