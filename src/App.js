@@ -11,6 +11,8 @@ import CellEstThumbnail from "./styling/pygame_platformer_image.png"
 import NUSeal from "./styling/nu_seal.png"
 import HeadshotEyesOpen from "./styling/bug_self.PNG";
 import HeadshotEyesClosed from "./styling/bug_self_eyes_closed.PNG";
+import LEDMatrixFront from "./styling/led_matrix_front.png";
+import LEDMatrixBack from "./styling/led_matrix_back.png";
 
 function App() {
   return (
@@ -129,7 +131,7 @@ function App() {
               </button>
               
               </article>
-              {/* <article id="project" className="card">
+              <article id="project" className="card">
 
               <button data-modal-target="#modal4"  className="card-button-hidden">
                 <h3>Physical Audio Visualizer</h3>
@@ -141,10 +143,10 @@ function App() {
                 </div>
                 <a className="btn">View More</a>
               </button>
-
               </article>
+             
+              
               <article id="project" className="card">
-
               <button data-modal-target="#modal5"  className="card-button-hidden">
                 <h3>Rackgit (Github Clone)</h3>
                 <p>A small recreation of GitHub written entirely in the Lisp-like language Racket</p>
@@ -155,7 +157,7 @@ function App() {
                 <a className="btn" href="#" target="_blank" rel="noopener noreferrer">View More</a>
               </button>
               
-              </article> */}
+              </article>
             </div>
           </div>
         </section>
@@ -248,7 +250,7 @@ function App() {
                   <span>Sept. 2025-Present</span>
                 </li>
                 <li>
-                  <span>GPA: 4.0</span>
+                  <span>GPA: 3.96</span>
                 </li>
               </ul>
             </div>
@@ -392,15 +394,14 @@ function App() {
             <h2>Physical Audio Visualizer</h2>
             <p>A soldered 8x8 LED matrix that can display audio from a microphone</p>
             <ul className="card-list">
-              <li>TEMP</li>
-              <li>TEMP</li>
+              <img src={ LEDMatrixFront } alt="front of soldered LED matrix and audio visualizer circuit on protoboard" style={{ width: '350px', height: '200px' }} />
+              <img src={ LEDMatrixBack } alt="back of soldered LED matrix and audio visualizer circuit on protoboard" style={{ width: '350px', height: '200px' }} />
             </ul>
             <div className="tag-holder">
               <label className="tag">Soldering</label>
               <label className="tag">Circuit</label>
               <label className="tag">ESP-32</label>
             </div>
-            <a className="btn" href="#" target="_blank" rel="noopener noreferrer">View Repo</a>
           </div>
         </div>
 
@@ -413,13 +414,11 @@ function App() {
             <h2>Rackgit (Github Clone)</h2>
             <p>A small recreation of GitHub written entirely in the Lisp-like language Racket</p>
             <ul className="card-list">
-                  <li>TEMP</li>
-                  <li>TEMP</li>
-                  <li>TEMP</li>
+                  <li>Implements the git file structure</li>
             </ul>
             <div className="tag-holder">
-              <label className="tag">C++</label>
-              <label className="tag">Microcontroller</label>
+              <label className="tag">Racket</label>
+              <label className="tag">Git</label>
             </div>
             <a className="btn" href="https://github.com/nicholas-holland-901/rackgit" target="_blank" rel="noopener noreferrer">View Repo</a>
           </div>
