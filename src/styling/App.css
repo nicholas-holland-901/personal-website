@@ -5,6 +5,7 @@ body {
 	margin: 0;
 	background-color: #6B4226;
 	color: #111;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main {
@@ -21,6 +22,10 @@ main {
 	box-sizing: border-box;
 	color: #111;
 	scroll-margin-top: var(--nav-h);
+}
+
+.section:not(.home) {
+	border-radius: 32px;
 }
 
 
@@ -120,6 +125,7 @@ main {
 	color: #fff;
 	position: relative;
 	overflow: hidden;
+	border-radius: 0;
 }
 
 .home-bg-squares {
@@ -344,7 +350,7 @@ main {
 	flex: 1 1 420px;
 	max-width: 520px;
 	width: 100%;
-	border-radius: 8px;
+	border-radius: 16px;
 	box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
@@ -367,7 +373,7 @@ main {
 	max-width: 520px;
 	border: 2px solid #000;
 	box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.25);
-	border-radius: 0;
+	border-radius: 20px;
 	overflow: hidden;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	position: static;
@@ -420,7 +426,7 @@ main {
 }
 
 .retro-content .hero-image {
-	border-radius: 0px;
+	border-radius: 14px;
 	border: 2px solid #000;
 	width: 400px;
 	height: auto;
@@ -448,10 +454,10 @@ main {
 
 .tag {
 	display: flex;
-	padding: 4px 8px;
+	padding: 6px 10px;
 	font-size: 12px;
 	font:100 12px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	border-radius: 5px;
+	border-radius: 999px;
 	margin: 0 4px 8px 0;
 	background: #2660A4;
 	color: #FEFFE6;
@@ -468,14 +474,13 @@ main {
 }
 
 .tag-holder {
-	margin: auto 0 8px 0;
-	padding: 0 0 0 8px;
-	margin-top: auto;
+	margin: 0 20px 12px 20px;
+	padding: 0;
 	display: flex;
 	align-self: flex-start;
 	align-items: center;
-	margin-top: auto;
 	flex-wrap: wrap;
+	gap: 6px;
 }
 
 /* .cards {
@@ -487,7 +492,18 @@ main {
 	position: relative;
 } */
 
-.cards {
+.cards#text {
+	z-index: 10;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+	margin-top: 24px;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+}
+
+.cards#image {
 	z-index: 10;
 	display: grid;
 	grid-template-columns: auto auto auto;
@@ -497,45 +513,49 @@ main {
 }
 
 .card#project {
-	background: #f2f3d9; /* #b9b9b9; */
-	border-radius: 0px;
+	background: transparent;
+	border-radius: 24px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 0.15);
+	box-shadow: none;
 	text-align: left;
 	height: 100%;
-	margin-bottom: -8px;
+	margin-bottom: 0;
 	padding: 0px;
-	width: 300px;
+	width: 100%;
+	max-width: 100%;
+	min-width: 0;
 	transition: transform 0.12s ease;
 	pointer-events: none;
 }
 
 .card#game {
-	background: #f2f3d9; /* #b9b9b9; */
-	border-radius: 0px;
+	background: #f2f3d9;
+	border-radius: 24px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 	box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 0.199);
 	text-align: left;
 	height: 100%;
-	padding: 0 0 16px 0;
+	padding: 0 0 20px 0;
 	width: 300px;
 	transition: transform 0.12s ease;
 }
 
 .card#knitting {
-	background: #f2f3d9; /* #b9b9b9; */
-	border-radius: 0px;
+	background: #f2f3d9;
+	border-radius: 24px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 	box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 0.199);
 	text-align: left;
 	height: 100%;
-	padding: 0 0 16px 0;
+	padding: 0 0 20px 0;
 	width: 300px;
 	transition: transform 0.12s ease;
 }
@@ -552,19 +572,21 @@ main {
 }
 
 .card h3 {
-	margin: 12px 24px 6px 16px;
+	margin: 16px 20px 8px 20px;
 	font-size: 32px;
+	line-height: 1.15;
 }
 
 .card h4 {
 	text-align: left;
-	margin: 12px 16px 6px 16px;
+	margin: 8px 20px 6px 20px;
 	color: green;
 }
 
 .card p {
-	margin: 8px 16px 16px 16px;
+	margin: 0 20px 14px 20px;
 	color: #444;
+	line-height: 1.5;
 }
 
 .card-list {
@@ -578,12 +600,12 @@ main {
 .btn {
 	width: auto;
 	display: inline-block;
-	margin: 8px 8px 8px 8px;
-	margin-top: 0;
-	padding: 8px 8px 8px 8px;
+	margin: 0 20px 0 20px;
+	margin-top: auto;
+	padding: 10px 14px;
 	background: #111827;
 	color: #fff;
-	border-radius: 0px;
+	border-radius: 999px;
 	text-decoration: none;
 	text-align: center; 
 	transition: transform 0.12s ease;
@@ -661,61 +683,157 @@ main {
 
 
 .modal-overlay {
-	display: none;
 	position: fixed;
-	top: 0; left: 0;
-	width: 100%; height: 100%;
-	background: rgba(0,0,0,0.5);
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	background: rgba(0, 0, 0, 0.62);
 	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.modal-overlay.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
 }
 
 .modal-content {
 	background: #F2F3D9;
-	margin: 10% auto;
-	padding: 0px;
-	width: fit-content;
-	height: fit-content;
-	border-radius: 0px;
+	width: min(760px, 100%);
+	max-height: min(86vh, 900px);
+	overflow: auto;
+	border-radius: 24px;
 	position: relative;
 	border: 2px solid black;
-	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 	text-align: left;
+	transform: translateY(20px) scale(0.98);
+	opacity: 0;
+	transition: transform 220ms ease, opacity 220ms ease;
 }
 
-.modal-content p {
-	margin: 8px 8px 8px 16px;
+.modal-overlay.is-open .modal-content {
+	transform: translateY(0) scale(1);
+	opacity: 1;
+}
+
+.modal-body {
+	padding: 20px 24px 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.modal-header {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.modal-header h2 {
+	margin: 0;
+	font-size: 32px;
+	line-height: 1.1;
+}
+
+.modal-header p {
+	margin: 0;
 	color: #444;
+	font-size: 1rem;
+	line-height: 1.5;
 }
 
 .modal-titlebar {
 	display: flex;
 	justify-content: flex-end;
-	margin: 0px 0px 0px 0px;
-	gap: 8px;
-	padding: 5px 10px;
+	padding: 8px 12px;
 	background: #2660A4;
 	color: #fff;
 	font-size: 14px;
 	border-bottom: 2px solid #000;
+	border-radius: 22px 22px 0 0;
+}
+
+.modal-close-button {
+	background: rgba(255, 255, 255, 0.18);
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px;
+	border-radius: 999px;
+}
+
+.modal-media {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 12px;
+}
+
+.modal-media img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border: 2px solid #000;
+	background: #fff;
+}
+
+.modal-highlights {
+	margin: 0;
+	padding-left: 20px;
+	display: grid;
+	gap: 10px;
+	color: #333;
+	line-height: 1.5;
+}
+
+.modal-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 2px;
+}
+
+.modal-action-btn {
+	margin: 0;
 }
 
 .card-button-hidden {
+	position: relative;
 	pointer-events: all;
 	cursor: pointer;
-	background: #f2f3d9; /* #b9b9b9; */
-	border-radius: 0px;
+	background: #f2f3d9;
+	border-radius: 24px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
 	border: 0;
 	text-align: left;
 	height: 100%;
-	padding: 0 0 16px 0;
-	width: 300px;
-	transition: transform 0.12s ease;
+	padding: 18px 20px 20px;
+	width: 100%;
+	max-width: 100%;
+	min-width: 0;
+	gap: 12px;
+	transition: transform 0.16s ease, box-shadow 0.16s ease, border-radius 0.2s ease;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+.card-button-hidden:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16), inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 .modal-overlay h2 {

@@ -13,8 +13,100 @@ import HeadshotEyesOpen from "./styling/bug_self.PNG";
 import HeadshotEyesClosed from "./styling/bug_self_eyes_closed.PNG";
 import LEDMatrixFront from "./styling/led_matrix_front.png";
 import LEDMatrixBack from "./styling/led_matrix_back.png";
+import BloomPulloverImage from "./styling/bloom_pullover.png"
+import ArmWarmersImage from "./styling/arm_warmers.png"
+import KnitFishImage from "./styling/knit_fish.png"
+
+const projects = [
+  {
+    id: 'self-playing-flute',
+    title: 'Self-Playing Flute',
+    summary: 'A flute that can play itself using servo motors and MIDI files',
+    accent: 'radial-gradient(circle at 20% 20%, rgba(255, 214, 102, 0.65), transparent 42%), radial-gradient(circle at 80% 15%, rgba(130, 205, 255, 0.4), transparent 35%)',
+    bullets: [
+      'Constructed a mount fitted for a standard concert C flute which uses servo motors capable of 34 different note/fingering combinations',
+      'Implemented file handling able to read Type 0 MIDI files and convert note data to readable format',
+      'Controlled 9 servo motors simultaneously by implementing a PCA9685 PWM driver board with an Elegoo microcontroller'
+    ],
+    tags: ['C++', 'Microcontroller'],
+    repoUrl: 'https://github.com/nicholas-holland-901/self_playing_flute',
+    repoLabel: 'View Repo'
+  },
+  {
+    id: 'neural-network-scratch',
+    title: 'Neural Network from Scratch',
+    summary: 'A neural network written in C from scratch to play snake game',
+    accent: 'radial-gradient(circle at 15% 25%, rgba(255, 177, 90, 0.45), transparent 38%), radial-gradient(circle at 85% 75%, rgba(120, 217, 166, 0.35), transparent 42%)',
+    bullets: [
+      'Designed a feedforward neural network from scratch in C to play snake game',
+      'Applied backpropagation and reinforcement learning techniques in order to maximize performance',
+      'Created a snake game in C using the SDL3 library to display graphics and handle input'
+    ],
+    tags: ['C', 'SDL3'],
+    repoUrl: 'https://github.com/nicholas-holland-901/snake_game_brain',
+    repoLabel: 'View Repo'
+  },
+  {
+    id: 'assembly-flappy-bird',
+    title: 'Assembly Flappy Bird',
+    summary: 'A recreation of Flappy Bird written entirely in ARM32 assembly',
+    accent: 'radial-gradient(circle at 25% 20%, rgba(155, 114, 255, 0.38), transparent 40%), radial-gradient(circle at 75% 80%, rgba(255, 125, 125, 0.3), transparent 34%)',
+    bullets: [
+      'Implemented sprite rotation, collision detection, background scrolling, and gravity in ARM32 assembly',
+      'Made as the final project for Northwestern University\'s COMP_ENG 205: Fundamentals of Computer System Software'
+    ],
+    tags: ['ARM32', 'Assembly', 'CPUlater'],
+    demoUrl: 'https://youtu.be/Ai_8R0GnEHE',
+    demoLabel: 'View Demo on YouTube'
+  },
+  {
+    id: 'audio-visualizer',
+    title: 'Physical Audio Visualizer',
+    summary: 'A soldered 8x8 LED matrix that can display audio from a microphone',
+    accent: 'radial-gradient(circle at 15% 80%, rgba(255, 166, 77, 0.42), transparent 36%), radial-gradient(circle at 80% 15%, rgba(111, 207, 255, 0.38), transparent 40%)',
+    bullets: [
+      'Built a compact audio-reactive display using an 8x8 LED matrix and microphone input',
+      'Soldered the circuit and wired the LED matrix for reliable visual output'
+    ],
+    tags: ['Soldering', 'Circuit', 'ESP-32'],
+    images: [
+      { src: LEDMatrixFront, alt: 'Front of the audio visualizer circuit', width: '350px', height: '200px' },
+      { src: LEDMatrixBack, alt: 'Back of the audio visualizer circuit', width: '350px', height: '200px' }
+    ]
+  },
+  {
+    id: 'rackgit',
+    title: 'Rackgit (Github Clone)',
+    summary: 'A small recreation of GitHub written entirely in the Lisp-like language Racket',
+    accent: 'radial-gradient(circle at 20% 20%, rgba(112, 216, 153, 0.42), transparent 36%), radial-gradient(circle at 80% 70%, rgba(255, 205, 124, 0.35), transparent 34%)',
+    bullets: [
+      'Implemented the git file structure and repository interaction flow',
+      'Built a lightweight command-line experience that mirrors core GitHub-style behavior'
+    ],
+    tags: ['Racket', 'Git'],
+    repoUrl: 'https://github.com/nicholas-holland-901/rackgit',
+    repoLabel: 'View Repo'
+  }
+];
 
 function App() {
+  const [activeModal, setActiveModal] = React.useState(null);
+
+  React.useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setActiveModal(null);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  const openModal = (projectId) => setActiveModal(projectId);
+  const closeModal = () => setActiveModal(null);
+  const activeProject = projects.find((project) => project.id === activeModal) || null;
+
   return (
     <div className="App">
       <Navbar />
@@ -84,80 +176,26 @@ function App() {
               <span className="circle" />
               <span className="circle" />
             </div>
-            <div className="cards">
-              <article id="project" className="card">
-
-              <button data-modal-target="#modal1" className="card-button-hidden">  
-                <h3>Self-Playing Flute</h3>
-                <p>A flute that can play itself using servo motors and MIDI files</p>
-                {/* <ul className="card-list">
-                  <li>Constructed a mount fitted for a standard concert C flute which uses servo motors capable of 34 different note/fingering combinations</li>
-                  <li>Implemented file handling able to read Type 0 MIDI files and convert note data to readable format</li>
-                  <li>Controlled 9 servo motors simultaneously by implementing PCA9685 PWM driver board with an Elegoo microcontroller</li>
-                </ul> */}
-                <div className="tag-holder">
-                  <label className="tag">C++</label>
-                  <label className="tag">Microcontroller</label>
-                </div>
-                <a className="btn">View More</a>
-              </button>
-
-              </article>
-              <article id="project" className="card">
-
-              <button data-modal-target="#modal2"  className="card-button-hidden">
-                <h3>Neural Network from Scratch</h3>
-                <p>A neural network written in C from scratch to play snake game</p>
-                <div className="tag-holder">
-                  <label className="tag">C</label>
-                  <label className="tag">SDL3</label>
-                </div>
-                <a className="btn">View More</a>
-              </button>
-              
-              </article>
-              <article id="project" className="card">
-
-
-              <button data-modal-target="#modal3"  className="card-button-hidden">
-                <h3>Assembly Flappy Bird</h3>
-                <p>A recreation of Flappy Bird written entirely in ARM32 assembly</p>
-                <div className="tag-holder">
-                  <label className="tag">ARM32</label>
-                  <label className="tag">Assembly</label>
-                  <label className="tag">CPUlater</label>
-                </div>
-                <a className="btn">View More</a>
-              </button>
-              
-              </article>
-              <article id="project" className="card">
-
-              <button data-modal-target="#modal4"  className="card-button-hidden">
-                <h3>Physical Audio Visualizer</h3>
-                <p>A soldered 8x8 LED matrix that can display audio from a microphone</p>
-                <div className="tag-holder">
-                  <label className="tag">Soldering</label>
-                  <label className="tag">Circuit</label>
-                  <label className="tag">ESP-32</label>
-                </div>
-                <a className="btn">View More</a>
-              </button>
-              </article>
-             
-              
-              <article id="project" className="card">
-              <button data-modal-target="#modal5"  className="card-button-hidden">
-                <h3>Rackgit (Github Clone)</h3>
-                <p>A small recreation of GitHub written entirely in the Lisp-like language Racket</p>
-                <div className="tag-holder">
-                  <label className="tag">Racket</label>
-                  <label className="tag">Git</label>
-                </div>
-                <a className="btn" href="#" target="_blank" rel="noopener noreferrer">View More</a>
-              </button>
-              
-              </article>
+            <div id="text" className="cards">
+              {projects.map((project) => (
+                <article id="project" className="card" key={project.id}>
+                  <button
+                    type="button"
+                    className="card-button-hidden"
+                    style={{ '--card-accent': project.accent }}
+                    onClick={() => openModal(project.id)}
+                  >
+                    <h3>{project.title}</h3>
+                    <p>{project.summary}</p>
+                    <div className="tag-holder">
+                      {project.tags.map((tag) => (
+                        <label className="tag" key={tag}>{tag}</label>
+                      ))}
+                    </div>
+                    <span className="btn">View More</span>
+                  </button>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -182,7 +220,7 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
-            <div className="cards">
+            <div id="image" className="cards">
               <article id="game" className="card">
                 <img src={ WoodtrailThumbnail } alt="woodtrail_game_thumbnail" />
                 <h3>Woodtrail</h3>
@@ -219,7 +257,7 @@ function App() {
           </div>
         </section>
 
-        <section id="resume" className="section" data-banner="Resume">
+        {/* <section id="resume" className="section" data-banner="Resume">
           <div className="section-banner top">
             <div className="banner-track">
               <div className="banner-list">
@@ -265,7 +303,7 @@ function App() {
             </div>
           </div>
 
-        </section>
+        </section> */}
         <section id="knitting" className="section" data-banner="Knitting">
           <div className="section-banner top">
             <div className="banner-track">
@@ -286,9 +324,9 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
-            <div className="cards">
+            <div id="image" className="cards">
               <article id="knitting" className="card">
-                <img src={ WoodtrailThumbnail } alt="woodtrail_game_thumbnail" />
+                <img src={ BloomPulloverImage } alt="woodtrail_game_thumbnail" />
                 <h3>Bloom Pullover</h3>
                 <p>Pattern by woolbirdx</p>
                 <div className="tag-holder">
@@ -299,7 +337,7 @@ function App() {
                 <a className="btn" href="https://www.etsy.com/listing/1868399215/english-knitting-pattern-bloom-pullover?ref=shop_home_feat_2&sr_prefetch=1&pf_from=shop_home&bes=1&sts=1&dd=1&logging_key=925dbeb0e9ac01fa866d1c4f7e51c24407de1c52%3A1868399215" target="_blank" rel="noopener noreferrer">View Pattern on Etsy</a>
               </article>
               <article id="knitting" className="card">
-                <img src={ PollyKittenThumbnail } alt="pollykitten_game_thumbnail" />
+                <img src={ ArmWarmersImage } alt="pollykitten_game_thumbnail" />
                 <h3>Arm Warmers</h3>
                 <p>Pattern by Louise Bollanos</p>
                 <div className="tag-holder">
@@ -309,7 +347,7 @@ function App() {
                 <a className="btn" href="https://www.handylittleme.com/fingerless-mittens-pattern/" target="_blank" rel="noopener noreferrer">View Pattern Source</a>
               </article>
               <article id="knitting" className="card">
-                <img src={ CellEstThumbnail } alt="python_platformer_game_screenshot"/>
+                <img src={ KnitFishImage } alt="python_platformer_game_screenshot"/>
                 <h3>Fish</h3>
                 <p>Pattern by Tatyana Grigoryan</p>
                 <div className="tag-holder">
@@ -322,105 +360,62 @@ function App() {
           </div>
         </section>
 
-        <div id="modal1" class="modal-overlay">
-          <div class="modal-content">
-          <div className="modal-titlebar">
-            <CgClose />
-          </div>
-            <span class="close-btn" data-close>&times;</span>
-            <h2>Self-Playing Flute</h2>
-            <p>A flute that can play itself using servo motors and MIDI files</p>
-            <ul className="card-list">
-                  <li>Constructed a mount fitted for a standard concert C flute which uses servo motors capable of 34 different note/fingering combinations</li>
-                  <li>Implemented file handling able to read Type 0 MIDI files and convert note data to readable format</li>
-                  <li>Controlled 9 servo motors simultaneously by implementing PCA9685 PWM driver board with an Elegoo microcontroller</li>
-            </ul>
-            <div className="tag-holder">
-              <label className="tag">C++</label>
-              <label className="tag">Microcontroller</label>
-            </div>
-            <a className="btn" href="https://github.com/nicholas-holland-901/self_playing_flute" target="_blank" rel="noopener noreferrer">View Repo</a>
-          </div>
-        </div>
+        <div className={`modal-overlay ${activeProject ? 'is-open' : ''}`} onClick={closeModal}>
+          <div
+            className="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={activeProject ? `modal-title-${activeProject.id}` : undefined}
+            onClick={(event) => event.stopPropagation()}
+          >
+            {activeProject && (
+              <>
+                <div className="modal-titlebar">
+                  <button type="button" className="modal-close-button" onClick={closeModal} aria-label={`Close ${activeProject.title} details`}>
+                    <CgClose />
+                  </button>
+                </div>
+                <div className="modal-body">
+                  <div className="modal-header">
+                    <h2 id={`modal-title-${activeProject.id}`}>{activeProject.title}</h2>
+                    <p>{activeProject.summary}</p>
+                  </div>
 
-        <div id="modal2" class="modal-overlay">
-          <div class="modal-content">
-          <div className="modal-titlebar">
-            <CgClose />
-          </div>
-            <span class="close-btn" data-close>&times;</span>
-            <h2>Neural Network from Scratch</h2>
-            <p>A neural network written in C from scratch to play snake game</p>
-            <ul className="card-list">
-              <li>Designed a feedforward neural network from scratch in C to play snake game</li>
-              <li>Applied backpropagation and reinforcement learning techniques in order to maximize performance</li>
-              <li>Created snake game in C using SDL3 library to display graphics and handle input</li>
-            </ul>
-            <div className="tag-holder">
-              <label className="tag">C</label>
-              <label className="tag">SDL3</label>
-            </div>
-            <a className="btn" href="https://github.com/nicholas-holland-901/snake_game_brain" target="_blank" rel="noopener noreferrer">View Repo</a>
-          </div>
-        </div>
+                  {activeProject.images && (
+                    <div className="modal-media">
+                      {activeProject.images.map((image) => (
+                        <img key={image.alt} src={image.src} alt={image.alt} style={{ width: image.width, height: image.height }} />
+                      ))}
+                    </div>
+                  )}
 
-        <div id="modal3" class="modal-overlay">
-          <div class="modal-content">
-          <div className="modal-titlebar">
-            <CgClose />
-          </div>
-            <span class="close-btn" data-close>&times;</span>
-            <h2>Assembly Flappy Bird</h2>
-            <p>A recreation of Flappy Bird written entirely in ARM32 assembly</p>
-            <ul className="card-list">
-              <li>Implemented sprite rotation, collision detection, background scrolling, and gravity in ARM32 assembly</li>
-              <li>Made as the final project for Northwestern University's COMP_ENG 205: Fundamentals of Computer System Software</li>
-            </ul>
-            <div className="tag-holder">
-              <label className="tag">ARM32</label>
-              <label className="tag">Assembly</label>
-              <label className="tag">CPUlater</label>
-            </div>
-            <a className="btn" href="https://youtu.be/Ai_8R0GnEHE" target="_blank" rel="noopener noreferrer">View Demo on Youtube</a>
-          </div>
-        </div>
+                  <ul className="modal-highlights">
+                    {activeProject.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
 
-        <div id="modal4" class="modal-overlay">
-          <div class="modal-content">
-          <div className="modal-titlebar">
-            <CgClose />
-          </div>
-            <span class="close-btn" data-close>&times;</span>
-            <h2>Physical Audio Visualizer</h2>
-            <p>A soldered 8x8 LED matrix that can display audio from a microphone</p>
-            <ul className="card-list">
-              <img src={ LEDMatrixFront } alt="front of soldered LED matrix and audio visualizer circuit on protoboard" style={{ width: '350px', height: '200px' }} />
-              <img src={ LEDMatrixBack } alt="back of soldered LED matrix and audio visualizer circuit on protoboard" style={{ width: '350px', height: '200px' }} />
-            </ul>
-            <div className="tag-holder">
-              <label className="tag">Soldering</label>
-              <label className="tag">Circuit</label>
-              <label className="tag">ESP-32</label>
-            </div>
-          </div>
-        </div>
+                  <div className="tag-holder">
+                    {activeProject.tags.map((tag) => (
+                      <label className="tag" key={tag}>{tag}</label>
+                    ))}
+                  </div>
 
-        <div id="modal5" class="modal-overlay">
-          <div class="modal-content">
-          <div className="modal-titlebar">
-            <CgClose />
-          </div>
-            <span class="close-btn" data-close>&times;</span>
-            <h2>Rackgit (Github Clone)</h2>
-            <p>A small recreation of GitHub written entirely in the Lisp-like language Racket</p>
-            <ul className="card-list">
-                  <li>Implements the git file structure</li>
-            </ul>
-            <div className="tag-holder">
-              <label className="tag">Racket</label>
-              <label className="tag">Git</label>
-            </div>
-            <a className="btn" href="https://github.com/nicholas-holland-901/rackgit" target="_blank" rel="noopener noreferrer">View Repo</a>
+                  <div className="modal-actions">
+                    {activeProject.repoUrl && (
+                      <a className="btn modal-action-btn" href={activeProject.repoUrl} target="_blank" rel="noopener noreferrer">
+                        {activeProject.repoLabel || 'View Repo'}
+                      </a>
+                    )}
+                    {activeProject.demoUrl && (
+                      <a className="btn modal-action-btn" href={activeProject.demoUrl} target="_blank" rel="noopener noreferrer">
+                        {activeProject.demoLabel || 'View Demo'}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
 
@@ -519,32 +514,6 @@ function HeroText({ text, className }) {
     </span>
   );
 }
-
-
-document.addEventListener('click', (event) => {
-  const openBtn = event.target.closest('[data-modal-target]');
-
-  if (openBtn) {
-    const modal = document.querySelector(
-      openBtn.getAttribute('data-modal-target')
-    );
-    if (modal) modal.style.display = 'block';
-    return;
-  }
-
-  const closeBtn = event.target.closest('[data-close]');
-
-  if (closeBtn) {
-    const overlay = closeBtn.closest('.modal-overlay');
-    if (overlay) overlay.style.display = 'none';
-    return;
-  }
-
-  if (event.target.classList.contains('modal-overlay')) {
-    event.target.style.display = 'none';
-  }
-});
-
 
 
 export default App;

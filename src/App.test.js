@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('opens and closes a project details modal', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  fireEvent.click(screen.getAllByRole('button', { name: /view more/i })[0]);
+
+  expect(screen.getByRole('dialog')).toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole('button', { name: /close self-playing flute details/i }));
+
+  expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
 });
