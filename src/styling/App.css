@@ -25,7 +25,7 @@ main {
 }
 
 .section:not(.home) {
-	border-radius: 32px;
+	border-radius: 0;
 }
 
 
@@ -438,15 +438,144 @@ main {
 
 #projects { background: #7C3626; }
 
-.projects-bg-circles {
-	position: absolute; 
+.projects-section-shell {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	z-index: 0;
+}
+
+.section-inner.projects-section-shell {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+.projects-decorations {
+	position: absolute;
 	inset: 0;
 	pointer-events: none;
-	overflow: hidden;
-	background: #7C3626;
-	z-index: 0;
+	user-select: none;
+	z-index: 1;
+	overflow: visible;
+}
+
+.sticker {
+	position: absolute;
+	opacity: 0.9;
+	filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.18));
 	pointer-events: none;
-	mask-composite: exclude;
+	user-select: none;
+	transform: rotate(-6deg);
+}
+
+.sticker-left {
+	left: 8px;
+	top: 10%;
+	width: 220px;
+	height: 220px;
+}
+
+.sticker-right {
+	right: 8px;
+	top: 22%;
+	width: 240px;
+	height: 240px;
+	transform: rotate(8deg);
+}
+
+.sticker-bottom {
+	left: 50%;
+	bottom: 4px;
+	transform: translateX(-50%) rotate(4deg);
+	width: 240px;
+	height: 240px;
+}
+
+.home-decorations .sticker-left {
+	left: 3%;
+	top: 12%;
+	width: 200px;
+	height: 230px;
+	transform: rotate(-10deg);
+}
+
+.home-decorations .sticker-right {
+	right: 8%;
+	top: 56%;
+	width: 80px;
+	height: 180px;
+	transform: rotate(14deg);
+}
+
+.projects-decorations .sticker-left {
+	left: 2%;
+	top: 14%;
+	width: 90px;
+	height: 200px;
+	transform: rotate(-6deg);
+}
+
+.projects-decorations .sticker-right {
+	right: 3%;
+	top: 35%;
+	width: 150px;
+	height: 150px;
+	transform: rotate(10deg);
+}
+
+.projects-decorations .sticker-bottom {
+	left: 1%;
+	bottom: 6%;
+	transform: rotate(-50deg);
+	width: 150px;
+	height: 150px;
+}
+
+.games-decorations .sticker-left {
+	left: 7%;
+	top: 72%;
+	width: 96px;
+	height: 96px;
+	transform: rotate(16deg);
+}
+
+.games-decorations .sticker-right {
+	right: 8%;
+	top: 12%;
+	width: 102px;
+	height: 102px;
+	transform: rotate(-12deg);
+}
+
+.knitting-decorations .sticker-left {
+	left: 8%;
+	top: 45%;
+	width: 80px;
+	height: 200px;
+	transform: rotate(8deg);
+}
+
+.knitting-decorations .sticker-right {
+	right: 6%;
+	bottom: 10%;
+	width: 112px;
+	height: 112px;
+	transform: rotate(-9deg);
+}
+
+.decorative-layer {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	user-select: none;
+	z-index: 1;
+	overflow: visible;
+}
+
+.decorative-layer .sticker {
+	opacity: 0.75;
 }
 
 #games { background: #646627; }
@@ -495,12 +624,12 @@ main {
 .cards#text {
 	z-index: 10;
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: minmax(280px, 720px);
 	gap: 24px;
-	margin-top: 24px;
+	margin: 24px auto 0;
 	position: relative;
 	width: 100%;
-	max-width: 100%;
+	justify-content: center;
 }
 
 .cards#image {
@@ -778,14 +907,17 @@ main {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 	gap: 12px;
+	align-items: start;
 }
 
 .modal-media img {
 	width: 100%;
 	height: auto;
-	object-fit: cover;
-	border: 2px solid #000;
-	background: #fff;
+	object-fit: contain;
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+	padding: 0;
 }
 
 .modal-highlights {

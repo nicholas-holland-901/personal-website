@@ -16,6 +16,9 @@ import LEDMatrixBack from "./styling/led_matrix_back.png";
 import BloomPulloverImage from "./styling/bloom_pullover.png"
 import ArmWarmersImage from "./styling/arm_warmers.png"
 import KnitFishImage from "./styling/knit_fish.png"
+import StickerStar from './styling/stars.png';
+import StickerOlives from './styling/olives.png';
+import StickerClover from './styling/clover.png';
 
 const projects = [
   {
@@ -113,6 +116,10 @@ function App() {
 
       <main>
         <section id="home" className="section home">
+          <div className="decorative-layer home-decorations" aria-hidden="true">
+            <img className="sticker sticker-left" src={StickerStar} alt="" />
+            <img className="sticker sticker-right" src={StickerOlives} alt="" />
+          </div>
           <div className="home-bg-squares" aria-hidden="true">
             <span className="home-bg-square square1" />
             <span className="home-bg-square square2" />
@@ -159,22 +166,11 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="section-inner">
-            <div className="projects-bg-circles" aria-hidden="true">
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
-              <span className="circle" />
+          <div className="section-inner projects-section-shell">
+            <div className="projects-decorations" aria-hidden="true">
+              <img className="sticker sticker-left" src={StickerOlives} alt="" />
+              <img className="sticker sticker-right" src={StickerStar} alt="" />
+              <img className="sticker sticker-bottom" src={StickerClover} alt="" />
             </div>
             <div id="text" className="cards">
               {projects.map((project) => (
@@ -220,6 +216,10 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
+            <div className="decorative-layer games-decorations" aria-hidden="true">
+              <img className="sticker sticker-left" src={StickerClover} alt="" />
+              <img className="sticker sticker-right" src={StickerStar} alt="" />
+            </div>
             <div id="image" className="cards">
               <article id="game" className="card">
                 <img src={ WoodtrailThumbnail } alt="woodtrail_game_thumbnail" />
@@ -324,6 +324,10 @@ function App() {
             </div>
           </div>
           <div className="section-inner">
+            <div className="decorative-layer knitting-decorations" aria-hidden="true">
+              <img className="sticker sticker-left" src={StickerOlives} alt="" />
+              <img className="sticker sticker-right" src={StickerClover} alt="" />
+            </div>
             <div id="image" className="cards">
               <article id="knitting" className="card">
                 <img src={ BloomPulloverImage } alt="woodtrail_game_thumbnail" />
