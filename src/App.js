@@ -93,6 +93,53 @@ const projects = [
   }
 ];
 
+function ProjectBackgroundObjects() {
+  const [time, setTime] = React.useState(0);
+
+  React.useEffect(() => {
+    let frameId;
+    let startTime = null;
+
+    const tick = (now) => {
+      if (startTime === null) {
+        startTime = now;
+      }
+
+      setTime((now - startTime) / 1000);
+      frameId = window.requestAnimationFrame(tick);
+    };
+
+    frameId = window.requestAnimationFrame(tick);
+    return () => window.cancelAnimationFrame(frameId);
+  }, []);
+
+  return (
+    <div className="project-bg-effect" aria-hidden="true">
+      {Array.from({ length: 14 }, (_, index) => {
+        const speed = 0.035 + index * 0.0004;
+        const amplitude = 18 + ((index % 4) + 1) * 10;
+        const phase = index * 0.7;
+        const startOffset = ((index * 37) % 29) / 29;
+        const progress = ((time * speed + startOffset) % 1 + 1) % 1;
+        const x = progress * 128;
+        const y = Math.sin(progress * Math.PI * 2 + phase) * amplitude;
+        const opacity = 0.42 + (Math.sin(progress * Math.PI * 2 + phase * 1.2) + 1) * 0.12;
+
+        return (
+          <span
+            key={`project-bg-${index + 1}`}
+            className={`project-bg-obj obj${index + 1}`}
+            style={{
+              transform: `translate3d(${x}vw, ${y}px, 0)`,
+              opacity,
+            }}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
 function App() {
   const [activeModal, setActiveModal] = React.useState(null);
 
@@ -152,6 +199,8 @@ function App() {
           </div>
         </section>
 
+
+
         <section id="projects" className="section" data-banner="Projects">
           <div className="section-banner top">
             <div className="banner-track">
@@ -171,6 +220,9 @@ function App() {
               </div>
             </div>
           </div>
+          
+          <ProjectBackgroundObjects />
+
           <div className="section-inner">
             <div className="projects-decorations" aria-hidden="true">
               <img className="sticker sticker-left" src={StickerOlives} alt="" />
