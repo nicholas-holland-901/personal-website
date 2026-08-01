@@ -340,14 +340,17 @@ main {
 
 .hero-copy-inner {
 	text-align: center;
+	width: 100%;
+	max-width: 100%;
 }
 
 .hero-content h1 {
 	font-size: 48px;
 	margin: 0 0 12px 0;
 	word-break: normal;
-	overflow-wrap: anywhere;
+	overflow-wrap: normal;
 	white-space: normal;
+	max-width: 100%;
 }
 
 .hero-content p {
@@ -355,8 +358,9 @@ main {
 	margin: 0 0 24px 0;
 	line-height: 1.6;
 	word-break: normal;
-	overflow-wrap: anywhere;
+	overflow-wrap: normal;
 	white-space: normal;
+	max-width: 100%;
 }
 
 .hero-image {
@@ -382,6 +386,8 @@ main {
 	max-width: 100%;
 	white-space: normal;
 	text-align: center;
+	word-break: normal;
+	overflow-wrap: normal;
 }
 
 .retro-window {
@@ -471,6 +477,67 @@ main {
 	pointer-events: none;
 	user-select: none;
 	transform: rotate(-6deg);
+	animation: stickerFloat 5.5s ease-in-out infinite;
+	border-radius: 12px;
+}
+
+@keyframes stickerFloat {
+	0%, 100% {
+		transform: rotate(-6deg) translate3d(0, 0, 0);
+	}
+	50% {
+		transform: rotate(-3deg) translate3d(0, -8px, 0);
+	}
+}
+
+.home-decorations .sticker-left {
+	animation-duration: 6.2s;
+	animation-delay: 0.2s;
+}
+
+.home-decorations .sticker-right {
+	animation-duration: 4.8s;
+	animation-delay: 0.6s;
+}
+
+.projects-decorations .sticker-left {
+	animation-duration: 5.4s;
+	animation-delay: 0.1s;
+}
+
+.projects-decorations .sticker-right {
+	animation-duration: 6.8s;
+	animation-delay: 0.4s;
+}
+
+.projects-decorations .sticker-bottom {
+	animation-duration: 5.8s;
+	animation-delay: 0.3s;
+}
+
+.projects-decorations .sticker-bottom-right {
+	animation-duration: 4.6s;
+	animation-delay: 0.7s;
+}
+
+.games-decorations .sticker-left {
+	animation-duration: 5.1s;
+	animation-delay: 0.5s;
+}
+
+.games-decorations .sticker-right {
+	animation-duration: 6.4s;
+	animation-delay: 0.2s;
+}
+
+.knitting-decorations .sticker-left {
+	animation-duration: 5.7s;
+	animation-delay: 0.8s;
+}
+
+.knitting-decorations .sticker-right {
+	animation-duration: 4.9s;
+	animation-delay: 0.4s;
 }
 
 .sticker-left {
@@ -513,7 +580,7 @@ main {
 }
 
 .projects-decorations .sticker-left {
-	left: 2%;
+	left: 7%;
 	top: 14%;
 	width: 90px;
 	height: 200px;
@@ -529,7 +596,7 @@ main {
 }
 
 .projects-decorations .sticker-bottom {
-	left: 1%;
+	left: 3%;
 	bottom: 6%;
 	transform: rotate(-50deg);
 	width: 150px;

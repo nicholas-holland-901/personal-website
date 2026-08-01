@@ -140,8 +140,12 @@ function App() {
           <div className="hero-content">
             <StaticWindow>
               <div className="hero-copy-inner">
-                <h1><HeroText text="Nicholas Holland" className="hero-title" /></h1>
-                <p><HeroText text="Computer Engineer & Game Developer" className="hero-sub" /></p>
+                <h1>
+                  <HeroText text="Nicholas Holland" className="hero-title" />
+                </h1>
+                <p>
+                  <HeroText text="Computer Engineer & Game Developer" className="hero-sub" />
+                </p>
               </div>
             </StaticWindow>
             <RetroWindow />
@@ -473,8 +477,8 @@ function StaticWindow({ children }) {
 }
 
 function HeroText({ text, className }) {
-  const chars = Array.from(text);
-  const [offsets, setOffsets] = React.useState(() => chars.map(() => ({ x: 0, y: 0 })));
+  const words = text.split(' ');
+  const [offsets, setOffsets] = React.useState(() => words.map(() => ({ x: 0, y: 0 })));
   const ref = React.useRef(null);
 
   const onMouseMove = (e) => {
@@ -501,22 +505,21 @@ function HeroText({ text, className }) {
     setOffsets(newOffsets);
   };
 
-  const onMouseLeave = () => setOffsets(chars.map(() => ({ x: 0, y: 0 })));
+  const onMouseLeave = () => setOffsets(words.map(() => ({ x: 0, y: 0 })));
 
   return (
     <span className={className} ref={ref} onMouseMove={onMouseMove} onMouseLeave={onMouseLeave}>
-      {chars.map((ch, i) => {
-        const displayChar = ch === ' ' ? '\u00A0' : ch;
-        return (
+      {words.map((word, wordIndex) => (
+        <React.Fragment key={`${word}-${wordIndex}`}>
           <span
-            key={i}
             className="letter"
-            style={{ transform: `translate(${offsets[i]?.x || 0}px, ${offsets[i]?.y || 0}px)`, display: 'inline-block' }}
+            style={{ transform: `translate(${offsets[wordIndex]?.x || 0}px, ${offsets[wordIndex]?.y || 0}px)`, display: 'inline-block' }}
           >
-            {displayChar}
+            {word}
           </span>
-        );
-      })}
+          {wordIndex < words.length - 1 ? ' ' : null}
+        </React.Fragment>
+      ))}
     </span>
   );
 }
