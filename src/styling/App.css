@@ -1260,8 +1260,16 @@ section#knitting .home-bg-squares .home-bg-square {
 	max-width: 100%;
 	min-width: 0;
 	gap: 12px;
+	color: #111;
+	font: inherit;
+	-webkit-appearance: none;
+	appearance: none;
 	transition: transform 0.16s ease, box-shadow 0.16s ease, border-radius 0.2s ease;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+.card-button-hidden h3 {
+	color: #111;
 }
 
 .card-button-hidden:hover {
