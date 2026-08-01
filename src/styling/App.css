@@ -335,17 +335,28 @@ main {
 .hero-copy {
 	flex: 1 1 420px;
 	max-width: 520px;
+	width: 100%;
+}
+
+.hero-copy-inner {
+	text-align: center;
 }
 
 .hero-content h1 {
 	font-size: 48px;
 	margin: 0 0 12px 0;
+	word-break: normal;
+	overflow-wrap: anywhere;
+	white-space: normal;
 }
 
 .hero-content p {
 	font-size: 20px;
 	margin: 0 0 24px 0;
 	line-height: 1.6;
+	word-break: normal;
+	overflow-wrap: anywhere;
+	white-space: normal;
 }
 
 .hero-image {
@@ -357,17 +368,20 @@ main {
 }
 
 
-
-
 .letter {
 	display: inline-block;
 	transition: transform 0.12s ease;
 	color: #000;
 	pointer-events: none;
+	white-space: normal;
 }
 
 .hero-title, .hero-sub {
 	color: #000;
+	display: inline-block;
+	max-width: 100%;
+	white-space: normal;
+	text-align: center;
 }
 
 .retro-window {
@@ -440,19 +454,6 @@ main {
 
 #projects { background: #7C3626; }
 
-.projects-section-shell {
-	position: relative;
-	width: 100%;
-	min-height: 100%;
-	z-index: 0;
-}
-
-.section-inner.projects-section-shell {
-	position: relative;
-	max-width: 1200px;
-	margin: 0 auto;
-	min-height: 100%;
-}
 
 .projects-decorations {
 	position: absolute;
@@ -535,11 +536,19 @@ main {
 	height: 150px;
 }
 
+.projects-decorations .sticker-bottom-right {
+	right: 3%;
+	bottom: 30%;
+	transform: rotate(15deg);
+	width: 100px;
+	height: 150px;
+}
+
 .games-decorations .sticker-left {
-	left: 7%;
-	top: 72%;
+	left: 6%;
+	top: 68%;
 	width: 96px;
-	height: 96px;
+	height: 150px;
 	transform: rotate(16deg);
 }
 
@@ -628,9 +637,8 @@ main {
 	display: grid;
 	grid-template-columns: minmax(280px, 720px);
 	gap: 24px;
-	margin: 24px auto 0;
+	margin-top: 24px;
 	position: relative;
-	width: 100%;
 	justify-content: center;
 }
 

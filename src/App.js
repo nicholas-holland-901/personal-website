@@ -167,11 +167,12 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="section-inner projects-section-shell">
+          <div className="section-inner">
             <div className="projects-decorations" aria-hidden="true">
               <img className="sticker sticker-left" src={StickerOlives} alt="" />
               <img className="sticker sticker-right" src={StickerStar} alt="" />
               <img className="sticker sticker-bottom" src={StickerClover} alt="" />
+              <img className="sticker sticker-bottom-right" src={StickerFish} alt="" />
             </div>
             <div id="text" className="cards">
               {projects.map((project) => (
@@ -218,7 +219,7 @@ function App() {
           </div>
           <div className="section-inner">
             <div className="decorative-layer games-decorations" aria-hidden="true">
-              <img className="sticker sticker-left" src={StickerClover} alt="" />
+              <img className="sticker sticker-left" src={StickerFish} alt="" />
               <img className="sticker sticker-right" src={StickerStar} alt="" />
             </div>
             <div id="image" className="cards">
