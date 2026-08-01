@@ -152,6 +152,45 @@ main {
 	animation: riseSquare 8.4s infinite linear;
 }
 
+section#games .home-bg-squares .home-bg-square {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	clip-path: polygon(38% 0, 62% 0, 62% 38%, 100% 38%, 100% 62%, 62% 62%, 62% 100%, 38% 100%, 38% 62%, 0 62%, 0 38%, 38% 38%);
+	transform: rotate(0deg);
+	animation: riseGamesShape 8.4s infinite linear;
+}
+
+section#games .home-bg-squares .home-bg-square::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: rgba(255, 255, 255, 0.18);
+	border: 8px solid rgba(255, 255, 255, 0.52);
+	border-radius: 999px;
+	clip-path: inherit;
+	opacity: 0.9;
+}
+
+section#knitting .home-bg-squares .home-bg-square {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	transform: rotate(45deg);
+	border-radius: 0;
+	animation: riseKnittingShape 8.4s infinite linear;
+}
+
+section#knitting .home-bg-squares .home-bg-square::before {
+	content: '';
+	position: absolute;
+	inset: 16%;
+	border: 7px solid rgba(255, 255, 255, 0.55);
+	border-radius: 999px;
+	opacity: 0.95;
+}
+
 .home-bg-square::after {
 	content: '';
 	position: absolute;
@@ -173,6 +212,13 @@ main {
 	box-shadow: 0 0 0 100px rgba(255, 255, 255, 0.28) inset;
 	animation-duration: 8.6s;
 	animation-delay: 0s;
+}
+
+section#games .home-bg-squares .home-bg-square,
+section#knitting .home-bg-squares .home-bg-square {
+	animation-duration: var(--duration, 8.6s);
+	animation-delay: var(--delay, 0s);
+	animation-iteration-count: infinite;
 }
 
 .square2 {
@@ -206,6 +252,7 @@ main {
 	animation-delay: 1.8s;
 }
 
+
 .square5 {
 	left: 55%;
 	width: 100px;
@@ -217,6 +264,8 @@ main {
 	animation-delay: 0.6s;
 }
 
+
+
 .square6 {
 	left: 65%;
 	width: 130px;
@@ -226,6 +275,8 @@ main {
 	animation-duration: 8s;
 	animation-delay: 2.2s;
 }
+
+
 
 .square7 {
 	left: 73%;
@@ -334,6 +385,28 @@ main {
 	}
 }
 
+@keyframes riseKnittingShape {
+	0% {
+		transform: translateY(0) rotate(45deg) scale(1);
+		opacity: 0.24;
+	}
+	100% {
+		transform: translateY(-500%) rotate(45deg) scale(0.2);
+		opacity: 0;
+	}
+}
+
+@keyframes riseGamesShape {
+	0% {
+		transform: translateY(0) rotate(0deg) scale(1);
+		opacity: 0.24;
+	}
+	100% {
+		transform: translateY(-500%) rotate(0deg) scale(0.2);
+		opacity: 0;
+	}
+}
+
 .project-bg-effect {
 	position: absolute;
 	inset: 0;
@@ -349,9 +422,9 @@ main {
 	height: 86px;
 	border-radius: 50%;
 	background: rgba(255, 255, 255, 0.16);
-	border: 2px solid rgba(255, 255, 255, 0.42);
+	border: 8px solid rgba(255, 255, 255, 0.292);
 	box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 10px 24px rgba(0,0,0,0.12);
-	opacity: 0.55;
+	opacity: 0.40;
 	animation: none;
 	pointer-events: none;
 	will-change: transform;

@@ -273,6 +273,27 @@ function App() {
               </div>
             </div>
           </div>
+          <div id="games" className="home-bg-squares" aria-hidden="true">
+            {Array.from({ length: 14 }, (_, index) => {
+              const duration = 10 + ((index % 5) + 1) * 1.7;
+              const delay = index * 1.2;
+              const offset = (index % 7) * 0.9;
+              const cycle = duration + offset + 2.1;
+
+              return (
+                <span
+                  key={`games-bg-${index + 1}`}
+                  className={`home-bg-square square${index + 1}`}
+                  style={{
+                    '--duration': `${duration}s`,
+                    '--delay': `${delay}s`,
+                    '--offset': `${offset}s`,
+                    '--cycle': `${cycle}s`,
+                  }}
+                />
+              );
+            })}
+          </div>
           <div className="section-inner">
             <div className="decorative-layer games-decorations" aria-hidden="true">
               <img className="sticker sticker-left" src={StickerFish} alt="" />
@@ -380,6 +401,27 @@ function App() {
                 <span className="banner-item">Knitting</span>
               </div>
             </div>
+          </div>
+          <div className="home-bg-squares" aria-hidden="true">
+            {Array.from({ length: 14 }, (_, index) => {
+              const duration = 11 + ((index % 4) + 1) * 1.4;
+              const delay = index * 1.6;
+              const offset = (index % 6) * 1.1;
+              const cycle = duration + offset + 2.8;
+
+              return (
+                <span
+                  key={`knitting-bg-${index + 1}`}
+                  className={`home-bg-square square${index + 1}`}
+                  style={{
+                    '--duration': `${duration}s`,
+                    '--delay': `${delay}s`,
+                    '--offset': `${offset}s`,
+                    '--cycle': `${cycle}s`,
+                  }}
+                />
+              );
+            })}
           </div>
           <div className="section-inner">
             <div className="decorative-layer knitting-decorations" aria-hidden="true">
