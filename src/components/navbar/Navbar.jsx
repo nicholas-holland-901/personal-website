@@ -27,16 +27,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <button
-                className="mobile-menu-toggle"
-                type="button"
-                onClick={() => setMenuOpen((open) => !open)}
-                aria-expanded={menuOpen}
-                aria-label="Toggle navigation menu"
-            >
-                ☰
-            </button>
-            <ul className={`navbar_links ${menuOpen ? 'open' : ''}`}>
+            <ul className={"navbar_links"}>
                 <a href="#home" onClick={(e) => handleNav(e, 'home')}>Home</a>
                 <a href="#projects" onClick={(e) => handleNav(e, 'projects')}>Projects</a>
                 <a href="#games" onClick={(e) => handleNav(e, 'games')}>Games</a>

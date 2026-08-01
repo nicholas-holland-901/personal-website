@@ -19,6 +19,7 @@ import KnitFishImage from "./styling/knit_fish.png"
 import StickerStar from './styling/stars.png';
 import StickerOlives from './styling/olives.png';
 import StickerClover from './styling/clover.png';
+import StickerFish from './styling/fish_sticker.png';
 
 const projects = [
   {

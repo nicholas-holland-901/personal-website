@@ -4,14 +4,17 @@
 
 html {
   scroll-padding-top: var(--nav-h);
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
+  min-height: 100%;
+  box-sizing: border-box;
   padding-top: var(--nav-h);
 }
 

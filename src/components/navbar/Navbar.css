@@ -15,6 +15,8 @@
     z-index: 2000;
 }
 
+
+
 .navbar::after {
     content: '';
     position: absolute;
@@ -32,6 +34,8 @@
     font-size: 20px;
     padding: 0 24px;
     align-items: center;
+    list-style: none;
+    margin: 0;
 }
 
 .navbar_links a { text-transform: capitalize; }
@@ -57,4 +61,33 @@
 
 .navbar_links a:hover {
     color: rgb(211, 211, 211);
+}
+
+@media (max-width: 760px) {
+
+    .navbar_links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: var(--nav-h);
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        /* background: #eaaa00; */
+        background: #0B6E4F;
+        z-index: 2000;
+        margin: 0px;
+        gap: 0px;
+    }
+
+
+
+    .navbar_links a, .navbar_links p {
+        font-size: 12px;
+        margin-right: auto;
+    }
+
 }
