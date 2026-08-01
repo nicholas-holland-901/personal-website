@@ -36,6 +36,20 @@
 
 .navbar_links a { text-transform: capitalize; }
 
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 12px 16px;
+}
+
+.navbar_links.open {
+    display: flex;
+}
+
 .navbar_links a {
     text-decoration: none;
     color: white;
