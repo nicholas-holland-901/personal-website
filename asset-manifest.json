@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.d6893aee.css",
-    "main.js": "/personal-website/static/js/main.e747d36c.js",
+    "main.css": "/personal-website/static/css/main.90033fbf.css",
+    "main.js": "/personal-website/static/js/main.d8dae84a.js",
     "static/js/453.855ab442.chunk.js": "/personal-website/static/js/453.855ab442.chunk.js",
     "static/media/led_matrix_back.png": "/personal-website/static/media/led_matrix_back.d7b23f8fcd9b45856f37.png",
     "static/media/knit_fish.png": "/personal-website/static/media/knit_fish.516f8c00fad49052bdc8.png",
@@ -18,12 +18,12 @@
     "static/media/pygame_platformer_image.png": "/personal-website/static/media/pygame_platformer_image.40ff3d29c166d81cc9d8.png",
     "static/media/olives.png": "/personal-website/static/media/olives.ea7335cee3f2bc09654e.png",
     "index.html": "/personal-website/index.html",
-    "main.d6893aee.css.map": "/personal-website/static/css/main.d6893aee.css.map",
-    "main.e747d36c.js.map": "/personal-website/static/js/main.e747d36c.js.map",
+    "main.90033fbf.css.map": "/personal-website/static/css/main.90033fbf.css.map",
+    "main.d8dae84a.js.map": "/personal-website/static/js/main.d8dae84a.js.map",
     "453.855ab442.chunk.js.map": "/personal-website/static/js/453.855ab442.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6893aee.css",
-    "static/js/main.e747d36c.js"
+    "static/css/main.90033fbf.css",
+    "static/js/main.d8dae84a.js"
   ]
 }
