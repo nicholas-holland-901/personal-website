@@ -13,8 +13,10 @@ import HeadshotEyesOpen from "./styling/bug_self.PNG";
 import HeadshotEyesClosed from "./styling/bug_self_eyes_closed.PNG";
 import LEDMatrixFront from "./styling/led_matrix_front.png";
 import LEDMatrixBack from "./styling/led_matrix_back.png";
-import BloomPulloverImage from "./styling/bloom_pullover.png"
+import BloomPulloverImage from "./styling/bloom_pullover.jpeg"
 import ArmWarmersImage from "./styling/arm_warmers.png"
+import CrochetCardiganImage from "./styling/crochet_cardigan_green.jpeg"
+import CrochetGlovesImage from "./styling/crochet_gloves.jpg"
 import KnitFishImage from "./styling/knit_fish.png"
 import StickerStar from './styling/stars.png';
 import StickerOlives from './styling/olives.png';
@@ -387,18 +389,18 @@ function App() {
           <div className="section-banner top">
             <div className="banner-track">
               <div className="banner-list">
-                <span className="banner-item">Knitting</span>
-                <span className="banner-item">Knitting</span>
-                <span className="banner-item">Knitting</span>
-                <span className="banner-item">Knitting</span>
-                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Textile Arts</span>
+                <span className="banner-item">Textile Arts</span>
+                <span className="banner-item">Textile Arts</span>
+                <span className="banner-item">Textile Arts</span>
+                <span className="banner-item">Textile Arts</span>
               </div>
               <div className="banner-list">
-                <span className="banner-item">Knitting</span>
-                <span className="banner-item">Knitting</span>
-                <span className="banner-item">Knitting</span>
-                <span className="banner-item">Knitting</span>
-                <span className="banner-item">Knitting</span>
+                <span className="banner-item">Textile Arts</span>
+                <span className="banner-item">Textile Arts</span>
+                <span className="banner-item">Textile Arts</span>
+                <span className="banner-item">Textile Arts</span>
+                <span className="banner-item">Textile Arts</span>
               </div>
             </div>
           </div>
@@ -430,6 +432,24 @@ function App() {
             </div>
             <div id="image" className="cards">
               <article id="knitting" className="card">
+                <img src={ CrochetCardiganImage } alt="woodtrail_game_thumbnail" />
+                <h3>Maeve Cardigan</h3>
+                <p>Pattern by Rachel Misner</p>
+                <div className="tag-holder">
+                  <label className="tag">Crochet</label>
+                </div>
+                <a className="btn" href="https://www.eandpcrochet.com/the-maeve-cardigan-crochet-pattern/" target="_blank" rel="noopener noreferrer">View Pattern Source</a>
+              </article>
+              <article id="knitting" className="card">
+                <img src={ CrochetGlovesImage } alt="woodtrail_game_thumbnail" />
+                <h3>Fingerless Gloves</h3>
+                <p>No pattern used</p>
+                <div className="tag-holder">
+                  <label className="tag">Crochet</label>
+                  <label className="tag">Freehand</label>
+                </div>
+             </article>
+              <article id="knitting" className="card">
                 <img src={ BloomPulloverImage } alt="woodtrail_game_thumbnail" />
                 <h3>Bloom Pullover</h3>
                 <p>Pattern by woolbirdx</p>
@@ -440,6 +460,8 @@ function App() {
                 </div>
                 <a className="btn" href="https://www.etsy.com/listing/1868399215/english-knitting-pattern-bloom-pullover?ref=shop_home_feat_2&sr_prefetch=1&pf_from=shop_home&bes=1&sts=1&dd=1&logging_key=925dbeb0e9ac01fa866d1c4f7e51c24407de1c52%3A1868399215" target="_blank" rel="noopener noreferrer">View Pattern on Etsy</a>
               </article>
+            </div>
+            <div id="centered" className="cards">
               <article id="knitting" className="card">
                 <img src={ ArmWarmersImage } alt="pollykitten_game_thumbnail" />
                 <h3>Arm Warmers</h3>

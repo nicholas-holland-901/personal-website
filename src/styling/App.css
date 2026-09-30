@@ -936,9 +936,20 @@ section#knitting .home-bg-squares .home-bg-square {
 .cards#image {
 	z-index: 10;
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 1fr;
 	gap: 40px 24px;
 	margin-top: 24px;
+	position: relative;
+}
+
+.cards#centered {
+	z-index: 10;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 40px 24px;
+	justify-content: center;
+	margin-top: 48px;
 	position: relative;
 }
 
@@ -1292,8 +1303,7 @@ section#knitting .home-bg-squares .home-bg-square {
 
 
 
-@media (max-width: 1000px) {
-	.cards { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1000px) {	
 	.navbar_links { gap: 32px; font-size: 20px; }
 }
 
@@ -1319,7 +1329,7 @@ section#knitting .home-bg-squares .home-bg-square {
 	.cards {
 		grid-template-columns: auto; 
 	}
-	.cards#text, .cards#image {
+	.cards#text, .cards#image, .cards#centered {
 		grid-template-columns: 1fr;
 		gap: auto;
 		width: 100%;
