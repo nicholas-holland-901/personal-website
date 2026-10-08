@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-website/static/css/main.30826693.css",
-    "main.js": "/personal-website/static/js/main.a9135ecb.js",
+    "main.js": "/personal-website/static/js/main.a0f0a653.js",
     "static/js/453.855ab442.chunk.js": "/personal-website/static/js/453.855ab442.chunk.js",
     "static/media/led_matrix_back.png": "/personal-website/static/media/led_matrix_back.d7b23f8fcd9b45856f37.png",
     "static/media/knit_fish.png": "/personal-website/static/media/knit_fish.516f8c00fad49052bdc8.png",
@@ -9,11 +9,13 @@
     "static/media/woodtrail_thumbnail.png": "/personal-website/static/media/woodtrail_thumbnail.e6e30f299e32042d0cfa.png",
     "static/media/bug_self.PNG": "/personal-website/static/media/bug_self.59683be42e4e03509fd5.PNG",
     "static/media/arm_warmers.png": "/personal-website/static/media/arm_warmers.fcd8e080e1d50d0d9493.png",
+    "static/media/light_box_renderer.png": "/personal-website/static/media/light_box_renderer.fbbb09839c875c50e019.png",
     "static/media/bug_self_eyes_closed.PNG": "/personal-website/static/media/bug_self_eyes_closed.4dfbbbdf85fa971467c8.PNG",
     "static/media/nu_seal.png": "/personal-website/static/media/nu_seal.d81a8ed280a4d9a2ad47.png",
     "static/media/clover.png": "/personal-website/static/media/clover.7f88f7532fb7719ed783.png",
     "static/media/bloom_pullover.jpeg": "/personal-website/static/media/bloom_pullover.4ef6b6bb21a9e384b82f.jpeg",
     "static/media/stars.png": "/personal-website/static/media/stars.da84f5450ed9da04c593.png",
+    "static/media/renderer_image_name.png": "/personal-website/static/media/renderer_image_name.5aba0627d9b92158ad9a.png",
     "static/media/pollykitten_thumbnail.png": "/personal-website/static/media/pollykitten_thumbnail.c1b37e8ebd0e91cd1ae2.png",
     "static/media/crochet_cardigan_green.jpeg": "/personal-website/static/media/crochet_cardigan_green.c570d0085b0ff7e40ece.jpeg",
     "static/media/pygame_platformer_image.png": "/personal-website/static/media/pygame_platformer_image.40ff3d29c166d81cc9d8.png",
@@ -22,11 +24,11 @@
     "static/media/olives.png": "/personal-website/static/media/olives.ea7335cee3f2bc09654e.png",
     "index.html": "/personal-website/index.html",
     "main.30826693.css.map": "/personal-website/static/css/main.30826693.css.map",
-    "main.a9135ecb.js.map": "/personal-website/static/js/main.a9135ecb.js.map",
+    "main.a0f0a653.js.map": "/personal-website/static/js/main.a0f0a653.js.map",
     "453.855ab442.chunk.js.map": "/personal-website/static/js/453.855ab442.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30826693.css",
-    "static/js/main.a9135ecb.js"
+    "static/js/main.a0f0a653.js"
   ]
 }
