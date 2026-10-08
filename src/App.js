@@ -22,8 +22,28 @@ import StickerStar from './styling/stars.png';
 import StickerOlives from './styling/olives.png';
 import StickerClover from './styling/clover.png';
 import StickerFish from './styling/fish_sticker.png';
+import RendererName from './styling/renderer_image_name.png';
+import RendererLight from './styling/light_box_renderer.png';
 
 const projects = [
+  {
+    id: 'opengl-graphics-renderer',
+    title: 'OpenGL 3D Renderer',
+    summary: 'A 3D renderer made from scratch using OpenGL and C++',
+    accent: 'radial-gradient(circle at 20% 20%, rgba(255, 214, 102, 0.65), transparent 42%), radial-gradient(circle at 80% 15%, rgba(130, 205, 255, 0.4), transparent 35%)',
+    bullets: [
+      'Developed a 3D graphics rendering program in C++ with OpenGL and SDL3 using techniques from free online textbook ”Learn OpenGL”',
+      'Applied linear algebra matrix properties to the OpenGL graphics pipeline to render scenes involving meshes, textures, and a controllable camera',
+      'Devised real-time lighting system using ambient + diffuse + specular light through vector math'
+    ],
+    tags: ['C++', 'OpenGL', 'SDL3'],
+    repoUrl: 'https://github.com/nicholas-holland-901/rasterization-renderer',
+    repoLabel: 'View Repo',
+    images: [
+      { src: RendererName, alt: 'The name "Nicholas Holland" written out using textured cubes in the 3D renderer', width: '350px', height: '200px' },
+      { src: RendererLight, alt: 'A pointlight shining on a cube in the 3D renderer', width: '350px', height: '200px' }
+    ]
+  },
   {
     id: 'self-playing-flute',
     title: 'Self-Playing Flute',
